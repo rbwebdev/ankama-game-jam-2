@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public Transform prefabX;
-    public Transform prefabO;
+    public GameObject prefabX;
+    public GameObject prefabO;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
