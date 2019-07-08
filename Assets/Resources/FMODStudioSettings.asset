@@ -16,7 +16,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: C:\Users\mmoretti\Documents\Ankama-game-jam-2-fmod\Ankama-game-jam-2-fmod.fspro
   SourceProjectPathUnformatted: C:\Users\mmoretti\Documents\Ankama-game-jam-2-fmod\Ankama-game-jam-2-fmod.fspro
-  SourceBankPathUnformatted: C:\Users\mmoretti\Documents\Ankama-game-jam-2-fmod\Build\Desktop
+  SourceBankPathUnformatted: Banks\Desktop
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 1
