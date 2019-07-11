@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="UiMixerView" id="{153b9070-872e-486f-a635-9219792f318b}">
+        <property name="name">
+            <value>FOL</value>
+        </property>
+        <relationship name="assignedStrips">
+            <destination>{f24f0510-4d96-4b12-9838-6dfa0161db68}</destination>
+            <destination>{f6004672-d2f3-472f-9527-b83a022aaf6e}</destination>
+            <destination>{b7d11cca-5c69-40ce-975a-a81a14788283}</destination>
+            <destination>{9e1d97f1-91f7-47b1-b5e8-a1bd32c0c467}</destination>
+            <destination>{dc96b30d-747a-4d03-b23a-64c5c56b3645}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{a4608e0c-94be-4f55-b99e-0d77ac228b56}</destination>
+        </relationship>
+    </object>
+</objects>

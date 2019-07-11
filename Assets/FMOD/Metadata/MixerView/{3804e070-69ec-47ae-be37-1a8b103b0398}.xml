@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="UiMixerView" id="{3804e070-69ec-47ae-be37-1a8b103b0398}">
+        <property name="name">
+            <value>Stems</value>
+        </property>
+        <relationship name="assignedStrips">
+            <destination>{3b96642c-8fe6-4bc2-8f26-ae5e046818d1}</destination>
+            <destination>{67c234e9-597c-419f-8d68-17c7d92f1272}</destination>
+            <destination>{f24f0510-4d96-4b12-9838-6dfa0161db68}</destination>
+            <destination>{16360b8a-cd4f-4e13-90e6-025d3f552582}</destination>
+            <destination>{8f5e5cec-30bb-4b63-9e80-782f18da0334}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{a4608e0c-94be-4f55-b99e-0d77ac228b56}</destination>
+        </relationship>
+    </object>
+</objects>

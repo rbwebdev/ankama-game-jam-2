@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="UiMixerView" id="{c5686d8d-9927-4d39-8bc3-206bf259a793}">
+        <property name="name">
+            <value>Footsteps</value>
+        </property>
+        <relationship name="assignedStrips">
+            <destination>{8d738fa2-393c-434c-95c1-09a9f246f565}</destination>
+            <destination>{570a4aca-d680-423d-9622-9c4875cc12b1}</destination>
+            <destination>{f54cc7ef-2cc2-4514-9a2b-e19fcdf7c714}</destination>
+            <destination>{3a3759f1-20e6-4fc9-a280-a9f9f1966bde}</destination>
+            <destination>{d03cc189-4dc1-444b-94bb-506075be27a1}</destination>
+            <destination>{53f164c8-7716-47ef-92bc-0dc60cb95781}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{a4608e0c-94be-4f55-b99e-0d77ac228b56}</destination>
+        </relationship>
+    </object>
+</objects>
