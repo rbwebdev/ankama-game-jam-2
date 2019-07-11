@@ -368,7 +368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625525715
 GameObject:
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 989530684}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,8 +549,13 @@ MonoBehaviour:
     - position: {fileID: 238064711}
       mob: {fileID: 572208726619747923, guid: 64d7dac0d12e78944af1d75f9d28a8eb, type: 3}
       delay: 1.5
-  - list: []
-  - list: []
+  - list:
+    - position: {fileID: 814632668}
+      mob: {fileID: 572208726619747923, guid: 64d7dac0d12e78944af1d75f9d28a8eb, type: 3}
+      delay: 0
+    - position: {fileID: 238064711}
+      mob: {fileID: 572208726619747923, guid: 64d7dac0d12e78944af1d75f9d28a8eb, type: 3}
+      delay: 0
   currentWave: 0
 --- !u!4 &989530685
 Transform:
