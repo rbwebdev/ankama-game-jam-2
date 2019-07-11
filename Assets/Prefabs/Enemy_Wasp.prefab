@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6381870815290592639}
   - component: {fileID: 6381870815290592636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 6381870816164456521}
   - component: {fileID: 6381870816164456516}
   - component: {fileID: -3428200716436804859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_Wasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -152,6 +152,8 @@ MonoBehaviour:
   healthPoints: 5
   damage: 20
   destroyDelay: 1
+  boost: {fileID: 4720042558365477258, guid: d755ffe29b52eb34383fff0938fed101, type: 3}
+  boostLootPercent: 100
   dead: 0
   cooldownMin: 1
   cooldownMax: 2
@@ -187,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6381870816587373524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6381870816805364835}
   - component: {fileID: 6381870816805364832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider_Hit
   m_TagString: Enemy
   m_Icon: {fileID: 0}

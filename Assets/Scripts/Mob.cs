@@ -50,9 +50,11 @@ public class Mob : MonoBehaviour
 
         if (boost)
         {
-            if (Random.Range(0f, 100f) > boostLootPercent)
+            if (Random.Range(0f, 100f) <= boostLootPercent)
             {
                 GameObject boostInstantiate = Instantiate(boost, transform.position, Quaternion.Euler(0f, 0f, 0f));
+                Rigidbody2D rb = boostInstantiate.GetComponent<Rigidbody2D>();
+                rb.AddForce(new Vector2(Random.Range(-100f, 100f), 200f));
             }
         }
 
