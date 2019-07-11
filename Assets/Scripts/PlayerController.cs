@@ -9,11 +9,16 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     public bool isGrounded;
 
+    private bool isLeft;
+    private bool isRight;
+
     float targetMoveSpeed;
 
     private void Start()
     {
         isGrounded = true;
+        isRight = true;
+        isLeft = false;
     }
 
     private void Update()
@@ -27,6 +32,20 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
+        }
+
+        if (!isLeft && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow)))
+        {
+            isRight = false;
+            isLeft = true;
+            transform.eulerAngles = new Vector3(0, -180, 0);
+        }
+        if (!isRight && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            isRight = true;
+            isLeft = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+
         }
     }
 }
