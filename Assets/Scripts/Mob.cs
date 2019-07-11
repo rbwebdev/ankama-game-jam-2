@@ -8,6 +8,10 @@ public class Mob : MonoBehaviour
     public float damage;
     public float destroyDelay;
 
+    public GameObject boost;
+    [Range(0f, 100f)]
+    public float boostLootPercent;
+
     protected Animator animator;
 
     public bool dead = false;
@@ -43,6 +47,15 @@ public class Mob : MonoBehaviour
         }
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
+
+        if (boost)
+        {
+            if (Random.Range(0f, 100f) > boostLootPercent)
+            {
+                GameObject boostInstantiate = Instantiate(boost, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            }
+        }
+
         Destroy(gameObject, destroyDelay);
     }
 }
