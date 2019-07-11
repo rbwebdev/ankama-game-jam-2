@@ -324,6 +324,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253739977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253739978}
+  m_Layer: 0
+  m_Name: Sting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &253739978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253739977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.459, y: -0.761, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 703246424}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +626,7 @@ Transform:
   m_Children:
   - {fileID: 1916029}
   - {fileID: 1574212961}
+  - {fileID: 253739978}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -611,10 +642,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d49feb74c58c59498a721f1c136d303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearthPoint: 0
-  damage: 0
-  destroyDelay: 0
+  hearthPoint: 5
+  damage: 20
+  destroyDelay: 1
   dead: 0
+  cooldownMin: 2
+  cooldownMax: 4
+  projectile: {fileID: 5508270068579781750, guid: cfcecd827845dd94995738b6eed4da93,
+    type: 3}
 --- !u!1 &1017077669
 GameObject:
   m_ObjectHideFlags: 0

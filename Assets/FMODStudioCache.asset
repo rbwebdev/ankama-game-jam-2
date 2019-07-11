@@ -42,6 +42,22 @@ MonoBehaviour:
   - Name: 
     Value: 68736
   Exists: 1
+--- !u!114 &-8042057132396589489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-7055975898952750899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,12 +117,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Banks\Desktop\FOL_Gen.bank
-  lastModified: 636984632403666016
+  lastModified: 636984668276964856
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 464064
+    Value: 490912
   Exists: 1
+--- !u!114 &-6140608807759349763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/VOI/Enemy/Hand/VOI_Hand_Death
+  guid: 108d61784fd9a8418018976c07d58667
+  Banks:
+  - {fileID: 5200246216303751283}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2150
 --- !u!114 &-5190091631811514575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +168,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1978
 --- !u!114 &-5178353382808911978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +237,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 3482
 --- !u!114 &-4024988266220850289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +260,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1957
+  Length: 500
 --- !u!114 &-3735008436691825088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +369,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -371573911493062196}
+  - {fileID: 259762535989522583}
   MinDistance: 0
   MaxDistance: 0
   Length: 185600
@@ -474,9 +513,12 @@ MonoBehaviour:
   - {fileID: 6658971292170118110}
   - {fileID: -7055975898952750899}
   - {fileID: 2246753921039794773}
+  - {fileID: 3891525312229064502}
+  - {fileID: -6140608807759349763}
+  - {fileID: 1044702543192287156}
   MasterBankRef: {fileID: 533722230481844655}
   StringsBankRef: {fileID: 6935361937452529834}
-  stringsBankWriteTime: 636984632403915350
+  stringsBankWriteTime: 636984668277234136
   cacheVersion: 2
 --- !u!114 &108303535830976942
 MonoBehaviour:
@@ -501,6 +543,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2045
+--- !u!114 &259762535989522583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &533722230481844655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,11 +573,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Banks\Desktop\Master
     Bank.bank
-  lastModified: 636984632403875465
+  lastModified: 636984668277194244
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 16266
+    Value: 15690
   Exists: 1
 --- !u!114 &583573998216092111
 MonoBehaviour:
@@ -566,7 +624,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2269
+  Length: 0
 --- !u!114 &990759889645562296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +647,30 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1110
+  Length: 100
+--- !u!114 &1044702543192287156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/VOI/Enemy/Hand/VOI_Hand_Hit
+  guid: 5edb774b055ddd4cac9f1183b464ddb8
+  Banks:
+  - {fileID: 5200246216303751283}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &1090506554448808670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +809,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4783
+--- !u!114 &3891525312229064502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/MUSIC_02
+  guid: cb8fc25190c82b4faf4833db2f716815
+  Banks:
+  - {fileID: 5624585342531064185}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8042057132396589489}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 112013
 --- !u!114 &4156631112059548317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,11 +961,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Banks\Desktop\Voix_Gen.bank
-  lastModified: 636984632403955242
+  lastModified: 636984668277284005
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 451712
+    Value: 532640
   Exists: 1
 --- !u!114 &5571278534988032214
 MonoBehaviour:
@@ -884,7 +989,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2373
+  Length: 1050
 --- !u!114 &5624585342531064185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,11 +1003,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Banks\Desktop\MUS_Gen.bank
-  lastModified: 636984632403835563
+  lastModified: 636984668277154347
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2643584
+    Value: 4199904
   Exists: 1
 --- !u!114 &5775032533752996660
 MonoBehaviour:
@@ -949,7 +1054,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2207
+  Length: 1400
 --- !u!114 &6658971292170118110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,11 +1114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Banks\Desktop\Master Bank.strings.bank
-  lastModified: 636984632403915350
+  lastModified: 636984668277234136
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 3796
+    Value: 3726
   Exists: 1
 --- !u!114 &7049111255698551874
 MonoBehaviour:

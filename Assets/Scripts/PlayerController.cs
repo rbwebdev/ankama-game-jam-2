@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthPoints -= damage;
-        life.text = "Life: " + healthPoints.ToString();
         if (healthPoints <= 0)
         {
             GameOver();

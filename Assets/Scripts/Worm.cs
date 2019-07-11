@@ -11,7 +11,6 @@ public class Worm : Mob
     void Start()
     {
         animator = transform.Find("Sprite").GetComponent<Animator>();
-        Debug.Log(animator);
     }
 
     // Update is called once per frame
@@ -40,6 +39,7 @@ public class Worm : Mob
             Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
             rigidbody.isKinematic = true;
             Collider2D collider = gameObject.transform.GetChild(0).GetComponent<Collider2D>();
+            collision.gameObject.GetComponentInParent<PlayerController>().TakeDamage(damage);
             Dead();
         }
     }
