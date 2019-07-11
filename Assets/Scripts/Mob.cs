@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    public float hearthPoint;
+    public float healthPoints;
     public float damage;
     public float destroyDelay;
 
@@ -26,8 +26,8 @@ public class Mob : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        hearthPoint -= damage;
-        if (hearthPoint <= 0)
+        healthPoints -= damage;
+        if (healthPoints <= 0)
         {
             Debug.Log("dead");
             Dead();
@@ -37,7 +37,10 @@ public class Mob : MonoBehaviour
     protected void Dead()
     {
         dead = true;
-        animator.SetBool("isDeath", true);
+        if (animator)
+        {
+            animator.SetBool("isDeath", true);
+        }
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
         Destroy(gameObject, destroyDelay);

@@ -16,7 +16,6 @@ public class WayPoints : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -24,7 +23,10 @@ public class WayPoints : MonoBehaviour
     {
         if (targetWayPoint == null)
             targetWayPoint = wayPointList[currentWayPoint];
-        walk();
+        if (!GetComponent<Mob>().dead)
+        {
+            walk();
+        }
     }
 
     void walk()

@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6381870816164456518}
   - component: {fileID: 6381870816164456521}
   - component: {fileID: 6381870816164456516}
+  - component: {fileID: -3428200716436804859}
   m_Layer: 0
   m_Name: Enemy_Wasp
   m_TagString: Enemy
@@ -127,13 +128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPointList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6948335657541066907, guid: 878328ec9c01bfd428a1aa2ed20f4d97, type: 3}
+  - {fileID: 4993237363242126057, guid: 648ac94043ba3d3459ae97f87e86ce1f, type: 3}
+  - {fileID: 2423256626191101523, guid: e4725cfc90e9cda4cbb21d279414e6dc, type: 3}
+  - {fileID: 6311797561473048573, guid: a5e180c2a90d24a4ba630d677db85536, type: 3}
+  - {fileID: 8608280860252859516, guid: e3bd23547cf5c40458fd0f84bd97d41e, type: 3}
+  - {fileID: 8787905647101741082, guid: 71e080db0d90b66439250bf84deec9b3, type: 3}
+  - {fileID: 4439898195868919819, guid: 616635a307c5fae479feebdba1dd2ab9, type: 3}
   currentWayPoint: 0
   speed: 4
 --- !u!114 &6381870816164456516
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d49feb74c58c59498a721f1c136d303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearthPoint: 5
+  healthPoints: 5
   damage: 20
   destroyDelay: 1
   dead: 0
@@ -156,6 +157,27 @@ MonoBehaviour:
   cooldownMax: 2
   projectile: {fileID: 5508270068579781750, guid: cfcecd827845dd94995738b6eed4da93,
     type: 3}
+--- !u!50 &-3428200716436804859
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381870816164456520}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &6381870816587373527
 GameObject:
   m_ObjectHideFlags: 0
