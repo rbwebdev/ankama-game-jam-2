@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpPower;
     public bool isGrounded;
+    public GameObject weapon;
+    public int lifeHP;
 
     private bool isLeft;
     private bool isRight;
@@ -32,6 +34,16 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
+        }
+
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        if (difference.x < 0)
+        {
+            weapon.transform.position = new Vector2(transform.position.x - 0.5f, transform.position.y);
+        }
+        else
+        {
+            weapon.transform.position = new Vector2(transform.position.x + 0.5f, transform.position.y);
         }
 
         if (!isLeft && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow)))
