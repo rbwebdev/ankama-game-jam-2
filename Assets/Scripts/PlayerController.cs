@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isLeft;
     private bool isRight;
 
-    private int medic = 25;
+    private int heal = 25;
     private int boostTime = 30;
 
     float targetMoveSpeed;
@@ -46,12 +46,19 @@ public class PlayerController : MonoBehaviour
         if (difference.x < 0)
         {
             weaponSprite.GetComponent<SpriteRenderer>().flipY = true;
+            isRight = false;
+            isLeft = true;
+            transform.eulerAngles = new Vector3(0, -180, 0);
         }
         else
         {
             weaponSprite.GetComponent<SpriteRenderer>().flipY = false;
+            isRight = true;
+            isLeft = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
+        /*
         if (!isLeft && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             isRight = false;
@@ -65,19 +72,20 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
+        */
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Medic")
         {
-            if (healthPoints + medic > 100)
+            if (healthPoints + heal > 100)
             {
                 healthPoints = 100;
             }
             else
             {
-                healthPoints += 25;
+                healthPoints += heal;
             }
             //Debug.Log("APPEL TAKE MEDIC");
             //Debug.Log("APPEL HP: " + healthPoints.ToString());
@@ -115,7 +123,7 @@ public class PlayerController : MonoBehaviour
    {
         Debug.Log("APPEL TAKE BOOST DAMAGE");
         Debug.Log("DAMAGE BOOSTED: +5");
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots += 5;
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage += 5;
         yield return new WaitForSeconds(boostTime);
         Debug.Log("DAMAGE BOOST END");
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= 5;

@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //Debug.Log("ENEMY DAMAGE: " + damage + " damages");
+            Debug.Log("ENEMY DAMAGE: " + damage + " damages");
             collision.gameObject.GetComponentInParent<Mob>().TakeDamage(damage);
         }
         DestroyProjectile();
