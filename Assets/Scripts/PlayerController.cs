@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
 
     float targetMoveSpeed;
 
+    private void Start()
+    {
+        isGrounded = true;
+    }
+
     private void Update()
     {
         targetMoveSpeed = Mathf.Lerp(rb.velocity.x, Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, Time.deltaTime * 10);
@@ -18,7 +23,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown (KeyCode.Space))
         {
-            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            if (isGrounded)
+            {
+                rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            }
         }
     }
 }
