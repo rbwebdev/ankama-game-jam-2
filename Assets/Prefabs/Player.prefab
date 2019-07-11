@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0df49715a9ff754badbf06f93554afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
   offset: -1
   projectile: {fileID: 6281935201827049906, guid: 57245bc4a7b0a454cb605e002fbd619e,
     type: 3}
@@ -389,7 +390,7 @@ MonoBehaviour:
   jumpPower: 8
   isGrounded: 0
   weapon: {fileID: 540765432814954403}
-  lifeHP: 100
+  healthPoints: 0
 --- !u!50 &540765432996359410
 Rigidbody2D:
   serializedVersion: 4
@@ -690,6 +691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startTimeBtwShots
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651184967618284205, guid: 4a966d4c45041c441aaefe1d3c856468,
+        type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a966d4c45041c441aaefe1d3c856468, type: 3}

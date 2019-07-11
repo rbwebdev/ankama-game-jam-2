@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     public bool isGrounded;
     public GameObject weapon;
-    public int lifeHP;
+
+    public float healthPoints;
 
     private bool isLeft;
     private bool isRight;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public float damage;
     public float speed;
 
     void Update()
@@ -13,13 +14,11 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Destroy Collision");
-        DestroyProjectile();
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Destroy Trigger");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponentInParent<Mob>().TakeDamage(damage);
+            Debug.Log("ENEMY DAMAGE " + damage + " damages");
+        }
         DestroyProjectile();
     }
 

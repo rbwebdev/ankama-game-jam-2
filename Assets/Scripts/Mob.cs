@@ -37,9 +37,10 @@ public class Mob : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hearthPoint -= damage;
-        if (hearthPoint < 0)
+        if (hearthPoint <= 0)
         {
             Debug.Log("dead");
+            Dead();
         }
     }
 
