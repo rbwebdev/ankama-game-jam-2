@@ -10,7 +10,8 @@ public class Worm : Mob
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = transform.Find("Sprite").GetComponent<Animator>();
+        Debug.Log(animator);
     }
 
     // Update is called once per frame
@@ -20,6 +21,13 @@ public class Worm : Mob
         {
             Transform player = GetTransformPlayer();
             Vector2 target = new Vector2(player.position.x, transform.position.y);
+            if (player.position.x < transform.position.x)
+            {
+                transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
+            } else
+            {
+                transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+            }
             transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
         }
     }
