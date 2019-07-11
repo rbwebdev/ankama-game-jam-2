@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         isRight = true;
         isLeft = false;
-        Debug.Log("APPEL HP: " + healthPoints.ToString());
+        //Debug.Log("APPEL HP: " + healthPoints.ToString());
     }
 
     private void Update()
@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        //mouse
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         if (difference.x < 0)
         {
@@ -78,8 +79,8 @@ public class PlayerController : MonoBehaviour
             {
                 healthPoints += 25;
             }
-            Debug.Log("APPEL TAKE MEDIC");
-            Debug.Log("APPEL HP: " + healthPoints.ToString());
+            //Debug.Log("APPEL TAKE MEDIC");
+            //Debug.Log("APPEL HP: " + healthPoints.ToString());
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "BoostDamages")
@@ -97,7 +98,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthPoints -= damage;
-        Debug.Log("APPEL HP: " + healthPoints.ToString());
+        //Debug.Log("APPEL HP: " + healthPoints.ToString());
         if (healthPoints <= 0)
         {
             GameOver();
