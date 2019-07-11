@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,11 +10,14 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     public bool isGrounded;
     public GameObject weapon;
+    public Text life;
 
     public float healthPoints;
 
     private bool isLeft;
     private bool isRight;
+
+    private int medic = 25;
 
     float targetMoveSpeed;
 
@@ -22,6 +26,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         isRight = true;
         isLeft = false;
+        life.text = "Life: " + healthPoints.ToString();
     }
 
     private void Update()
@@ -61,4 +66,37 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Medic")
+        {
+            if (healthPoints + medic > 100)
+            {
+                healthPoints = 100;
+            }
+            else
+            {
+                healthPoints += 25;
+            }
+            life.text = "Life: " + healthPoints.ToString();
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        healthPoints -= damage;
+        life.text = "Life: " + healthPoints.ToString();
+        if (healthPoints <= 0)
+        {
+            GameOver();
+        }
+    }
+
+   void GameOver()
+    {
+        Destroy(gameObject);
+        Debug.Log("GAME OVER");
+   }
 }
