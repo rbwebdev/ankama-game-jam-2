@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     {
         Invoke("DestroyProjectile", 2);
     }
+
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
