@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572208726118256096}
   - component: {fileID: 572208726118256103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PH128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 572208726619747922}
   - component: {fileID: 572208726619747921}
   - component: {fileID: 572208726619747920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ennemy_Worm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hearthPoint: 10
   damage: 20
-  speed: 0.4
+  destroyDelay: 0.3
+  dead: 0
+  speed: 0.6
 --- !u!1 &572208727903565523
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572208727903565522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572208728169909295}
   - component: {fileID: 572208728169909294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider_Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +222,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 572208728169909288}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ff1e26e2de1ecce42b642a1eedc66d5f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

@@ -6,6 +6,9 @@ public class Mob : MonoBehaviour
 {
     public float hearthPoint;
     public float damage;
+    public float destroyDelay;
+
+    public bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +20,6 @@ public class Mob : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("ici");
     }
 
     protected Transform GetTransformPlayer()
@@ -42,7 +40,14 @@ public class Mob : MonoBehaviour
         if (hearthPoint < 0)
         {
             Debug.Log("dead");
-            Destroy(gameObject);
         }
+    }
+
+    protected void Dead()
+    {
+        dead = true;
+        Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
+        spawner.modDead();
+        Destroy(gameObject, destroyDelay);
     }
 }
