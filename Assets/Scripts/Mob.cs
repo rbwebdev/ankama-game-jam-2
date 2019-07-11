@@ -8,19 +8,9 @@ public class Mob : MonoBehaviour
     public float damage;
     public float destroyDelay;
 
+    protected Animator animator;
+
     public bool dead = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     protected Transform GetTransformPlayer()
     {
@@ -47,6 +37,7 @@ public class Mob : MonoBehaviour
     protected void Dead()
     {
         dead = true;
+        animator.SetBool("isDeath", true);
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
         Destroy(gameObject, destroyDelay);
