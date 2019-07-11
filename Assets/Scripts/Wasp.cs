@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Wasp : Mob
 {
+    public float cooldownMin;
+    public float cooldownMax;
+    public GameObject projectile;
+
+    private Transform StingTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StingTransform = transform.Find("Sting").transform;
+        StartCoroutine(fire(Random.Range(cooldownMin, cooldownMax)));
     }
 
     // Update is called once per frame
@@ -16,7 +23,6 @@ public class Wasp : Mob
         if (!dead)
         {
             Transform player = GetTransformPlayer();
-            Debug.Log(player.position.x < transform.position.x);
             if (player.position.x < transform.position.x)
             {
                 transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
@@ -24,6 +30,22 @@ public class Wasp : Mob
             {
                 transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
             }
+        }
+    }
+
+    private IEnumerator fire(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        if (!dead)
+        {
+            Transform player = GetTransformPlayer();
+            Vector3 difference = player.position - StingTransform.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+            GameObject sting = Instantiate(projectile, StingTransform.position, Quaternion.Euler(0.0f, 0.0f, rotZ));
+            sting.GetComponent<Sting>().damage = damage;
+
+            StartCoroutine(fire(Random.Range(cooldownMin, cooldownMax)));
         }
     }
 }

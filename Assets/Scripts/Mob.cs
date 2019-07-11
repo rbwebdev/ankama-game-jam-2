@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    public float hearthPoint;
+    public float healthPoints;
     public float damage;
     public float destroyDelay;
+
+    public GameObject boost;
+    [Range(0f, 100f)]
+    public float boostLootPercent;
 
     protected Animator animator;
 
@@ -26,8 +30,8 @@ public class Mob : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        hearthPoint -= damage;
-        if (hearthPoint <= 0)
+        healthPoints -= damage;
+        if (healthPoints <= 0)
         {
             Debug.Log("dead");
             Dead();
@@ -37,9 +41,23 @@ public class Mob : MonoBehaviour
     protected void Dead()
     {
         dead = true;
-        animator.SetBool("isDeath", true);
+        if (animator)
+        {
+            animator.SetBool("isDeath", true);
+        }
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
+
+        if (boost)
+        {
+            if (Random.Range(0f, 100f) <= boostLootPercent)
+            {
+                GameObject boostInstantiate = Instantiate(boost, transform.position, Quaternion.Euler(0f, 0f, 0f));
+                Rigidbody2D rb = boostInstantiate.GetComponent<Rigidbody2D>();
+                rb.AddForce(new Vector2(Random.Range(-100f, 100f), 200f));
+            }
+        }
+
         Destroy(gameObject, destroyDelay);
     }
 }

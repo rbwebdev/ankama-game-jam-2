@@ -67,9 +67,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3031f4485254074eb88c817ac639dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearthPoint: 10
+  healthPoints: 0
   damage: 20
   destroyDelay: 0.3
+  boost: {fileID: 4000928804631731784, guid: eb4177f4eb8d0024ea975c3e5734d61d, type: 3}
+  boostLootPercent: 100
   dead: 0
   speed: 0.6
 --- !u!1 &572208727903565523
