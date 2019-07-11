@@ -12,20 +12,17 @@ public class PlayerController : MonoBehaviour
 
     public float healthPoints;
 
-    private bool isLeft;
-    private bool isRight;
+    //private bool isLeft;
+    //private bool isRight;
 
-    private int heal = 25;
-    private int boostTime = 30;
+    private float healthPointsForReset;
 
     float targetMoveSpeed;
 
     private void Start()
     {
         isGrounded = true;
-        isRight = true;
-        isLeft = false;
-        //Debug.Log("APPEL HP: " + healthPoints.ToString());
+        healthPointsForReset = healthPoints;
     }
 
     private void Update()
@@ -40,73 +37,55 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
         }
-        
-        //mouse
+
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         if (difference.x < 0)
         {
             weaponSprite.GetComponent<SpriteRenderer>().flipY = true;
-            isRight = false;
-            isLeft = true;
             transform.eulerAngles = new Vector3(0, -180, 0);
         }
         else
         {
             weaponSprite.GetComponent<SpriteRenderer>().flipY = false;
-            isRight = true;
-            isLeft = false;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-
-        /*
-        if (!isLeft && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow)))
-        {
-            isRight = false;
-            isLeft = true;
-            transform.eulerAngles = new Vector3(0, -180, 0);
-        }
-        if (!isRight && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)))
-        {
-            isRight = true;
-            isLeft = false;
-            transform.eulerAngles = new Vector3(0, 0, 0);
-
-        }
-        */
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Medic")
         {
-            if (healthPoints + heal > 100)
+            float boostPoints = collision.gameObject.GetComponent<Medic>().healValue;
+            float healthPointsForReset = healthPoints;
+            if (healthPoints + boostPoints > healthPoints)
             {
-                healthPoints = 100;
+                healthPoints = healthPointsForReset;
             }
             else
             {
-                healthPoints += heal;
+                healthPoints += boostPoints;
             }
-            //Debug.Log("APPEL TAKE MEDIC");
-            //Debug.Log("APPEL HP: " + healthPoints.ToString());
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "BoostDamages")
         {
+            float boostPoints = collision.gameObject.GetComponent<BoostDamages>().boostPoints;
+            float boostTime = collision.gameObject.GetComponent<BoostDamages>().boostTime;
+            StartCoroutine(BoostDamages(boostPoints, boostTime));
             Destroy(collision.gameObject);
-            StartCoroutine(BoostDamages());
         }
         if (collision.gameObject.tag == "BoostDPS")
         {
+            float boostMultiplicator = collision.gameObject.GetComponent<BoostDPS>().boostMultiplicator;
+            float boostTime = collision.gameObject.GetComponent<BoostDPS>().boostTime;
             Destroy(collision.gameObject);
-            StartCoroutine(BoostDPS());
+            StartCoroutine(BoostDPS(boostMultiplicator, boostTime));
         }
     }
 
     public void TakeDamage(float damage)
     {
         healthPoints -= damage;
-        //Debug.Log("APPEL HP: " + healthPoints.ToString());
         if (healthPoints <= 0)
         {
             GameOver();
@@ -116,27 +95,19 @@ public class PlayerController : MonoBehaviour
    void GameOver()
    {
         Destroy(gameObject);
-        Debug.Log("APPEL IS DEAD: GAME OVER");
    }
 
-   IEnumerator BoostDamages()
+   IEnumerator BoostDamages(float boostPoints, float boostTime)
    {
-        Debug.Log("APPEL TAKE BOOST DAMAGE");
-        Debug.Log("DAMAGE BOOSTED: +5");
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage += 5;
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage += boostPoints;
         yield return new WaitForSeconds(boostTime);
-        Debug.Log("DAMAGE BOOST END");
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= 5;
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= boostPoints;
     }
 
-    IEnumerator BoostDPS()
+    IEnumerator BoostDPS(float boostMultiplicator, float boostTime)
     {
-        Debug.Log("APPEL TAKE BOOST DPS");
-        Debug.Log("DPS BOOSTED: x2");
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots /= 2;
-        Debug.Log("DPS BOOSTED: x2 -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots /= boostMultiplicator;
         yield return new WaitForSeconds(boostTime);
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= 2;
-        Debug.Log("DPS BOOST END -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator;
     }
 }
