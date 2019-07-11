@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     public bool isGrounded;
     public GameObject weapon;
-    public Text life;
 
     public float healthPoints;
 
@@ -26,7 +24,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         isRight = true;
         isLeft = false;
-        life.text = "Life: " + healthPoints.ToString();
+        Debug.Log("APPEL HP: " + healthPoints.ToString());
     }
 
     private void Update()
@@ -79,15 +77,26 @@ public class PlayerController : MonoBehaviour
             {
                 healthPoints += 25;
             }
-            life.text = "Life: " + healthPoints.ToString();
+            Debug.Log("APPEL TAKE MEDIC");
+            Debug.Log("APPEL HP: " + healthPoints.ToString());
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "BoostDamages")
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(BoostDamages());
+        }
+        if (collision.gameObject.tag == "BoostDPS")
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(BoostDPS());
         }
     }
 
     public void TakeDamage(float damage)
     {
         healthPoints -= damage;
-        life.text = "Life: " + healthPoints.ToString();
+        Debug.Log("APPEL HP: " + healthPoints.ToString());
         if (healthPoints <= 0)
         {
             GameOver();
@@ -95,8 +104,29 @@ public class PlayerController : MonoBehaviour
     }
 
    void GameOver()
-    {
+   {
         Destroy(gameObject);
-        Debug.Log("GAME OVER");
+        Debug.Log("APPEL IS DEAD: GAME OVER");
    }
+
+   IEnumerator BoostDamages()
+   {
+        Debug.Log("APPEL TAKE BOOST DAMAGE");
+        Debug.Log("DAMAGE BOOSTED: +5");
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots += 5;
+        yield return new WaitForSeconds(30);
+        Debug.Log("DAMAGE BOOST END");
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= 5;
+    }
+
+    IEnumerator BoostDPS()
+    {
+        Debug.Log("APPEL TAKE BOOST DPS");
+        Debug.Log("DPS BOOSTED: x2");
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots /= 2;
+        Debug.Log("DPS BOOSTED: x2 -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
+        yield return new WaitForSeconds(30);
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= 2;
+        Debug.Log("DPS BOOST END -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
+    }
 }

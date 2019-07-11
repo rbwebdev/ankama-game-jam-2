@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Spawner
   - Medic
+  - BoostDamages
+  - Weapon
+  - BoostDPS
   layers:
   - Default
   - TransparentFX
