@@ -342,6 +342,8 @@ MonoBehaviour:
   jumpPower: 16
   isGrounded: 0
   weaponSprite: {fileID: 3947613444673771865}
+  pauseMenu: {fileID: 4659673616000493125, guid: 3bc0a3b3c653b6c4eb97eb87dc8a6b88,
+    type: 3}
   healthPoints: 100
 --- !u!50 &540765432996359410
 Rigidbody2D:

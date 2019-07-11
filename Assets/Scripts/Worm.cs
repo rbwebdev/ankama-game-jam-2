@@ -27,7 +27,7 @@ public class Worm : Mob
             {
                 transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
             }
-            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
     }
 

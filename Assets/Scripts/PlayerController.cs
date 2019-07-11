@@ -37,17 +37,20 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
         }
-
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        if (difference.x < 0)
+        
+        if (PauseMenu.gameIsPaused == false)
         {
-            weaponSprite.GetComponent<SpriteRenderer>().flipY = true;
-            transform.eulerAngles = new Vector3(0, -180, 0);
-        }
-        else
-        {
-            weaponSprite.GetComponent<SpriteRenderer>().flipY = false;
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            if (difference.x < 0)
+            {
+                weaponSprite.GetComponent<SpriteRenderer>().flipY = true;
+                transform.eulerAngles = new Vector3(0, -180, 0);
+            }
+            else
+            {
+                weaponSprite.GetComponent<SpriteRenderer>().flipY = false;
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
     }
 
