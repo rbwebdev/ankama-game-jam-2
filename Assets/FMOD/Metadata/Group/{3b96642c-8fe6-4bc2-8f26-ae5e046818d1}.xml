@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="MixerGroup" id="{3b96642c-8fe6-4bc2-8f26-ae5e046818d1}">
+        <property name="volume">
+            <value>-3.60000014</value>
+        </property>
+        <property name="name">
+            <value>MUSIC</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{4e15cd5e-c8a9-49f4-a434-99136336c0f4}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{e79835f3-acf1-4cd1-bd5f-b92a44e18ed6}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{67c14c02-ab7a-4b64-8fdd-9c01de76589c}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{4e15cd5e-c8a9-49f4-a434-99136336c0f4}">
+        <relationship name="effects">
+            <destination>{d023e0ad-6b24-4550-ae53-62bf55323907}</destination>
+            <destination>{936b2009-164e-4e13-b837-8ec8c7446585}</destination>
+            <destination>{0a1d1a50-1dd6-4b88-b691-3b23a596d8ca}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{e79835f3-acf1-4cd1-bd5f-b92a44e18ed6}"/>
+    <object class="ThreeEQEffect" id="{d023e0ad-6b24-4550-ae53-62bf55323907}">
+        <property name="lowGain">
+            <value>-3</value>
+        </property>
+        <property name="midGain">
+            <value>-8.5</value>
+        </property>
+        <property name="highGain">
+            <value>-1</value>
+        </property>
+        <property name="lowCrossover">
+            <value>620</value>
+        </property>
+        <property name="highCrossover">
+            <value>5200</value>
+        </property>
+    </object>
+    <object class="MixerBusFader" id="{936b2009-164e-4e13-b837-8ec8c7446585}"/>
+    <object class="MixerSend" id="{0a1d1a50-1dd6-4b88-b691-3b23a596d8ca}">
+        <property name="level">
+            <value>-35</value>
+        </property>
+        <property name="inputFormat">
+            <value>1</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{f651de6d-df12-4be9-b342-c3a8ca3efe0d}</destination>
+        </relationship>
+    </object>
+</objects>

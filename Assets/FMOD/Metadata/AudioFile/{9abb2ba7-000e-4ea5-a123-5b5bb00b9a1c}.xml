@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{9abb2ba7-000e-4ea5-a123-5b5bb00b9a1c}">
+        <property name="assetPath">
+            <value>FOL/Gen/Move/footsteps-007.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.1593424036281179</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{48905772-42e9-46e4-83f2-6c399f67c426}</destination>
+        </relationship>
+    </object>
+</objects>

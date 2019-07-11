@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{bc076c24-4b64-4a77-83d7-e9874341305c}">
+        <property name="assetPath">
+            <value>VOI/Human Voice Woman A Hit 01-002.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.8867120181405896</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{48905772-42e9-46e4-83f2-6c399f67c426}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="MixerGroup" id="{1597bef6-9162-4c3f-9e7a-06680ec37cde}">
+        <property name="name">
+            <value>Worm</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{a42922b0-927d-4a41-b6ea-fb469a76ed00}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{261d725d-55a2-4f21-b5d1-2d567a794b54}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{8f5e5cec-30bb-4b63-9e80-782f18da0334}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{a42922b0-927d-4a41-b6ea-fb469a76ed00}">
+        <relationship name="effects">
+            <destination>{b2b59024-a3c5-4602-9df3-b9eab59dd52b}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{261d725d-55a2-4f21-b5d1-2d567a794b54}"/>
+    <object class="MixerBusFader" id="{b2b59024-a3c5-4602-9df3-b9eab59dd52b}"/>
+</objects>

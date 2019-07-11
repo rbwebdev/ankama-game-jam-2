@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     {
         Invoke("DestroyProjectile", 2);
     }
+
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -20,7 +21,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("ENEMY DAMAGE: " + damage + " damages");
+            //Debug.Log("ENEMY DAMAGE: " + damage + " damages");
             collision.gameObject.GetComponentInParent<Mob>().TakeDamage(damage);
         }
         DestroyProjectile();

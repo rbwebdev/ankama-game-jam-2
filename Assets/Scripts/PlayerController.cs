@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpPower;
     public bool isGrounded;
-    public GameObject weapon;
+    public GameObject weaponSprite;
 
     public float healthPoints;
 
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private bool isRight;
 
     private int medic = 25;
+    private int boostTime = 30;
 
     float targetMoveSpeed;
 
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         isRight = true;
         isLeft = false;
-        Debug.Log("APPEL HP: " + healthPoints.ToString());
+        //Debug.Log("APPEL HP: " + healthPoints.ToString());
     }
 
     private void Update()
@@ -39,15 +40,16 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
         }
-
+        
+        //mouse
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         if (difference.x < 0)
         {
-            weapon.transform.position = new Vector2(transform.position.x - 0.5f, transform.position.y);
+            weaponSprite.GetComponent<SpriteRenderer>().flipY = true;
         }
         else
         {
-            weapon.transform.position = new Vector2(transform.position.x + 0.5f, transform.position.y);
+            weaponSprite.GetComponent<SpriteRenderer>().flipY = false;
         }
 
         if (!isLeft && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow)))
@@ -77,8 +79,8 @@ public class PlayerController : MonoBehaviour
             {
                 healthPoints += 25;
             }
-            Debug.Log("APPEL TAKE MEDIC");
-            Debug.Log("APPEL HP: " + healthPoints.ToString());
+            //Debug.Log("APPEL TAKE MEDIC");
+            //Debug.Log("APPEL HP: " + healthPoints.ToString());
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "BoostDamages")
@@ -96,6 +98,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthPoints -= damage;
+        //Debug.Log("APPEL HP: " + healthPoints.ToString());
         if (healthPoints <= 0)
         {
             GameOver();
@@ -113,7 +116,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("APPEL TAKE BOOST DAMAGE");
         Debug.Log("DAMAGE BOOSTED: +5");
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots += 5;
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(boostTime);
         Debug.Log("DAMAGE BOOST END");
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= 5;
     }
@@ -124,7 +127,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("DPS BOOSTED: x2");
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots /= 2;
         Debug.Log("DPS BOOSTED: x2 -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= 2;
         Debug.Log("DPS BOOST END -> " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots);
     }
