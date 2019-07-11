@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8807070094658577352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\MUS_Gen.bank
+  lastModified: 636982080853444079
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
 --- !u!114 &-8058802183586381661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +175,7 @@ MonoBehaviour:
   Path: event:/AMB/AMB_Loc/AMB_Loc_
   guid: 63fffa56e116d145a9cd83b5094e218f
   Banks:
-  - {fileID: 1691958476623466408}
+  - {fileID: -416552970097137946}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -331,7 +350,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Human
   guid: 20911fe58be24c4fa9cc05731e68f6ad
   Banks:
-  - {fileID: 4712222558163251831}
+  - {fileID: 5840935735179767606}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -488,6 +507,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2648326305248696497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\UI_Gen.bank
+  lastModified: 636982080853584043
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
 --- !u!114 &-2486615882434325078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +625,25 @@ MonoBehaviour:
   - Name: 
     Value: 450
   Exists: 1
+--- !u!114 &-416552970097137946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\AMB_Gen.bank
+  lastModified: 636982080853304129
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2232
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,20 +658,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5159942564270967535}
-  - {fileID: -5839233977002981540}
-  - {fileID: 7711820177364031885}
-  - {fileID: -7931717216631014564}
-  - {fileID: 4712222558163251831}
-  - {fileID: 260556254344446522}
-  - {fileID: 1907156569032789924}
-  - {fileID: 1691958476623466408}
+  - {fileID: 5745714857505578176}
+  - {fileID: -2648326305248696497}
+  - {fileID: 2950602746867238450}
+  - {fileID: 5840935735179767606}
+  - {fileID: -8807070094658577352}
+  - {fileID: 6069640700515012945}
+  - {fileID: -416552970097137946}
   EditorEvents:
   - {fileID: -4588242496528014576}
   - {fileID: -6759709907088676137}
   - {fileID: 3003412182350808726}
-  MasterBankRef: {fileID: -7931717216631014564}
+  MasterBankRef: {fileID: 2950602746867238450}
   StringsBankRef: {fileID: 5159942564270967535}
-  stringsBankWriteTime: 636981827200195877
+  stringsBankWriteTime: 636982080853543868
   cacheVersion: 2
 --- !u!114 &260556254344446522
 MonoBehaviour:
@@ -852,6 +909,25 @@ MonoBehaviour:
   - Name: 
     Value: 1380
   Exists: 1
+--- !u!114 &2950602746867238450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\Master Bank.bank
+  lastModified: 636982080853484079
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 13924
+  Exists: 1
 --- !u!114 &3003412182350808726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,7 +943,7 @@ MonoBehaviour:
   Path: event:/AMB/AMB_Statique/AMB_
   guid: 7b67c0cb6bc8c74daacaad3bd7673696
   Banks:
-  - {fileID: 1691958476623466408}
+  - {fileID: -416552970097137946}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1006,11 +1082,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Banks\Desktop\Master Bank.strings.bank
-  lastModified: 636981827200195877
+  lastModified: 636982080853543868
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 1416
+  Exists: 1
+--- !u!114 &5745714857505578176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\GFX_Gen.bank
+  lastModified: 636982080853393915
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
+--- !u!114 &5840935735179767606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\FOL_Gen.bank
+  lastModified: 636982080853353929
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1380
   Exists: 1
 --- !u!114 &5970459994671139358
 MonoBehaviour:
@@ -1030,6 +1144,25 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 2232
+  Exists: 1
+--- !u!114 &6069640700515012945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Banks\Desktop\Voix_Gen.bank
+  lastModified: 636982080853633835
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
   Exists: 1
 --- !u!114 &6242710028331738949
 MonoBehaviour:
