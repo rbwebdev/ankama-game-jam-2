@@ -155,10 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0530d468683e10847abba21ccbf64fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  healValue: 25
-=======
-  healValue: 0
+  healValue: 5
 --- !u!114 &6691915682679063501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,4 +179,3 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
->>>>>>> master
