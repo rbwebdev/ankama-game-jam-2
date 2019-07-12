@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540765432996359409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.513, y: -3.52, z: 0}
+  m_LocalPosition: {x: 0, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 540765431700428448}
@@ -342,8 +342,6 @@ MonoBehaviour:
   jumpPower: 16
   isGrounded: 0
   weaponSprite: {fileID: 3947613444673771865}
-  pauseMenu: {fileID: 4659673616000493125, guid: 3bc0a3b3c653b6c4eb97eb87dc8a6b88,
-    type: 3}
   healthPoints: 100
 --- !u!50 &540765432996359410
 Rigidbody2D:
