@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float healthPointsForReset;
 
     float targetMoveSpeed;
+    private Vector2 mouse;
 
     private void Start()
     {
@@ -100,12 +101,12 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
    }
 
-   IEnumerator BoostDamages(float boostPoints, float boostTime)
+    IEnumerator BoostDamages(float boostPoints, float boostTime)
    {
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage += boostPoints;
         yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage -= boostPoints;
-    }
+   }
 
     IEnumerator BoostDPS(float boostMultiplicator, float boostTime)
     {
