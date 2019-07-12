@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public string DeathAudio = "event:/VOI/Apple/VOI_Apple_Death";
     public FMOD.Studio.EventInstance DeathApple;
     public FMOD.Studio.ParameterInstance DeathApplePar;
+    public string HealthAudio = "event:/UI/Life/Life_Low";
+    public FMOD.Studio.EventInstance HealthApple;
+    public FMOD.Studio.ParameterInstance HealthApplePar;
 
 
     public Rigidbody2D rb;
@@ -130,8 +133,9 @@ public class PlayerController : MonoBehaviour
             float boostMultiplicator = collision.gameObject.GetComponent<BoostDPS>().boostMultiplicator;
             float boostTime = collision.gameObject.GetComponent<BoostDPS>().boostTime;
             Destroy(collision.gameObject);
-            DSPBOOST();
             UIBOOST();
+            DSPBOOST();
+            
             if (!dspBoosted)
             {
                 dspBoosted = true;
@@ -145,7 +149,11 @@ public class PlayerController : MonoBehaviour
         healthPoints -= damage;
         printHP();
         UILESSLIFE();
-        if (healthPoints <= 0)
+        if (healthPoints <= 30)
+        {
+            HEALTHAPPLE();
+        }
+        else if (healthPoints <= 0)
         {
             GameOver();
         }
@@ -266,5 +274,10 @@ public class PlayerController : MonoBehaviour
     {
         DeathApple = FMODUnity.RuntimeManager.CreateInstance(DeathAudio);
         DeathApple.start();
+    }
+    void HEALTHAPPLE()
+    {
+        HealthApple = FMODUnity.RuntimeManager.CreateInstance(HealthAudio);
+        HealthApple.start();
     }
 }
