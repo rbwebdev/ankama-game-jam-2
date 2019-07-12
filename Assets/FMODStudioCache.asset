@@ -558,6 +558,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 112013
+--- !u!114 &-7312355892979415498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Life/Life_Low
+  guid: 6ad8048bd477ac4aba9db2f8575e4348
+  Banks:
+  - {fileID: -2759867819623855870}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1209
 --- !u!114 &-7290630232793890363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,6 +627,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 958
+--- !u!114 &-7220277878653845007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Pause
+  guid: 4f4ce5e610497d4482b80ef9da0e5b51
+  Banks:
+  - {fileID: 297166766851471626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7120190940580927022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +709,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3114537242931756128}
+  - {fileID: 946594213449752242}
   MinDistance: 0
   MaxDistance: 0
   Length: 185600
@@ -1328,6 +1374,29 @@ MonoBehaviour:
   Min: 0
   Max: 1.1
   Default: 0
+--- !u!114 &-5104446911508517813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Life/Less_life
+  guid: 90807930436db1418afd9f23dca7bc3d
+  Banks:
+  - {fileID: -2759867819623855870}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &-5099739642915489008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1417,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3616107176941660279}
+  - {fileID: -4455228492238844360}
   MinDistance: 0
   MaxDistance: 0
   Length: 112013
@@ -1375,6 +1444,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 260
+--- !u!114 &-4946818167713882255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-4944688881119596679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,6 +1648,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-4455228492238844360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-4387628633091424280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,11 +2000,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\UI_Gen.bank
-  lastModified: 636985325454596816
+  lastModified: 636985431769694892
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 68736
+    Value: 1283040
   Exists: 1
 --- !u!114 &-2617552371777654014
 MonoBehaviour:
@@ -2601,6 +2702,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-388148083199910784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-383585020541811730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2781,7 +2898,6 @@ MonoBehaviour:
   - {fileID: 1557918016279273904}
   - {fileID: -383585020541811730}
   - {fileID: -5099739642915489008}
-  - {fileID: 5088080196919810741}
   - {fileID: -6989519262003325201}
   - {fileID: -5607235045524067923}
   - {fileID: -4807163495869959412}
@@ -2801,11 +2917,17 @@ MonoBehaviour:
   - {fileID: 8474811181510321775}
   - {fileID: -1476755741517759388}
   - {fileID: -4152881188376377686}
+  - {fileID: 1819169823924065240}
+  - {fileID: -7312355892979415498}
+  - {fileID: -5104446911508517813}
+  - {fileID: 6830175867607322125}
+  - {fileID: -7220277878653845007}
+  - {fileID: 977693955901465585}
   MasterBanks:
   - {fileID: 297166766851471626}
   StringsBanks:
   - {fileID: 186221457495361605}
-  stringsBankWriteTime: 636985325454527004
+  stringsBankWriteTime: 636985431769664975
   cacheVersion: 3
 --- !u!114 &703134641253060
 MonoBehaviour:
@@ -2882,11 +3004,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636985325454527004
+  lastModified: 636985431769664975
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3724
+    Value: 3958
   Exists: 1
 --- !u!114 &234048577979474966
 MonoBehaviour:
@@ -2925,11 +3047,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636985325454437243
+  lastModified: 636985431769615111
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 15690
+    Value: 16932
   Exists: 1
 --- !u!114 &328658651436357214
 MonoBehaviour:
@@ -3179,6 +3301,45 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 958
+--- !u!114 &946594213449752242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
+--- !u!114 &977693955901465585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Start
+  guid: 5e3033e985e30c4c9e99d33d9dba4469
+  Banks:
+  - {fileID: 297166766851471626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1053798273735364573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,6 +3448,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1392
+--- !u!114 &1819169823924065240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Life/Boost
+  guid: 17a9a925bf788f4c9b8be00eea237800
+  Banks:
+  - {fileID: -2759867819623855870}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &2000794715979356273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4429,6 +4613,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &6830175867607322125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/MUSIC_Pause
+  guid: d089f7612ca3eb4ab80d9d5886a3920c
+  Banks:
+  - {fileID: -2759867819623855870}
+  - {fileID: 7677029048795389935}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -388148083199910784}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 110800
 --- !u!114 &6833167442748324532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4480,7 +4689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\FOL_Gen.bank
-  lastModified: 636985325453968495
+  lastModified: 636985431769445558
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -4781,7 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\MUS_Gen.bank
-  lastModified: 636985325454347480
+  lastModified: 636985431769575214
   LoadResult: 0
   FileSizes:
   - Name: Desktop

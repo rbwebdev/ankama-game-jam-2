@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Fire()
     {
-        sprite.GetComponent<SpriteRenderer>().color = new Color(160, 0, 0);
+        sprite.GetComponent<SpriteRenderer>().color = new Color(213, 144, 144);
         yield return new WaitForSeconds(0.025f);
         sprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }

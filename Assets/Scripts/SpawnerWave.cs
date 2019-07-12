@@ -9,6 +9,8 @@ public class SpawnerWave
     public int mobNumer;
     public float SpawnTime;
     public List<SpawnType> types;
+    public string eventName;
+    public float WaveDelay = 0f;
 
 
     public SpawnType GetSpawnType()

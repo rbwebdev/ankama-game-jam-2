@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 8827529764406494754}
   - component: {fileID: 5176823984656644684}
   - component: {fileID: 987350650870292737}
-  - component: {fileID: 1121944053212463107}
   - component: {fileID: 3162096969569648063}
   - component: {fileID: 6547883570367528644}
   - component: {fileID: 4877749973206273582}
@@ -312,6 +311,9 @@ GameObject:
   - component: {fileID: 2544707724850944626}
   - component: {fileID: 1516724432613255473}
   - component: {fileID: 7125019568291062702}
+  - component: {fileID: 3218518166603903141}
+  - component: {fileID: 4857067924252503114}
+  - component: {fileID: 5184246304026272906}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -444,29 +446,6 @@ MonoBehaviour:
   PlayEvent: 5
   StopEvent: 0
   CollisionTag: Enemy
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &1121944053212463107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540765432996359409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/VOI/Apple/VOI_Apple_Death
-  PlayEvent: 2
-  StopEvent: 1
-  CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -635,6 +614,75 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &3218518166603903141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540765432996359409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/Life/Boost
+  PlayEvent: 5
+  StopEvent: 0
+  CollisionTag: Medic
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &4857067924252503114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540765432996359409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/Life/Boost
+  PlayEvent: 5
+  StopEvent: 0
+  CollisionTag: BoostDamages
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &5184246304026272906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540765432996359409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/Life/Boost
+  PlayEvent: 5
+  StopEvent: 0
+  CollisionTag: BoostDPS
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &3947613444673771865
 GameObject:
   m_ObjectHideFlags: 0
