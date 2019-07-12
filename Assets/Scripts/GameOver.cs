@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartMenu : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     public GameObject startMenuUI;
 
@@ -13,20 +13,11 @@ public class StartMenu : MonoBehaviour
         {
             QuitGame();
         }
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown("enter") || Input.GetKeyDown("return"))
-        {
-            PlayGame();
-        }
     }
 
     public void PlayGame()
     {
         SceneManager.LoadScene("Game");
-    }
-
-    public void Credits()
-    {
-        SceneManager.LoadScene("CreditsScreen");
     }
 
     public void QuitGame()
