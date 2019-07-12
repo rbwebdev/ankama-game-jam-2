@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 540765431700428448}
   - component: {fileID: 540765431700428450}
   - component: {fileID: 540765431700428451}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,9 +85,9 @@ GameObject:
   m_Component:
   - component: {fileID: 540765431968544548}
   - component: {fileID: 540765431968544551}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collider_Hit
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1177335593245637606}
   - component: {fileID: 1696592838622526697}
   - component: {fileID: 8197548368130008188}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540765432814954402}
   - component: {fileID: 540765432814954404}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 2544707724850944626}
   - component: {fileID: 1516724432613255473}
   - component: {fileID: 7125019568291062702}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5600396679001972726}
   - component: {fileID: 1037817439891709234}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2013639321379782773}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,6 +820,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 3651184967618284202, guid: 4a966d4c45041c441aaefe1d3c856468,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3651184967618284205, guid: 4a966d4c45041c441aaefe1d3c856468,
         type: 3}
       propertyPath: offset
@@ -909,6 +914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036616919021531859, guid: 46c68af80153aa9459fff1e425b5ac98,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5036616919021531857, guid: 46c68af80153aa9459fff1e425b5ac98,
         type: 3}
