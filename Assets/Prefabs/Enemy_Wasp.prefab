@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/VOI/Enemy/Wasp/VOI_Wasp_Death
-  PlayEvent: 2
+  PlayEvent: 9
   StopEvent: 0
   CollisionTag: 
   AllowFadeout: 1

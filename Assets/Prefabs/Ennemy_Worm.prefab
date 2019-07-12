@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Death/FOL_GEN_Death_Worm
-  PlayEvent: 2
+  PlayEvent: 9
   StopEvent: 0
   CollisionTag: 
   AllowFadeout: 1
