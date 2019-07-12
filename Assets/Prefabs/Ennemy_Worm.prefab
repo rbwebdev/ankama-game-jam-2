@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3770563843516852723}
   - component: {fileID: -28637102734356092}
   - component: {fileID: 9168391092874667573}
+  - component: {fileID: 6216874914953228816}
+  - component: {fileID: 6579317740813292952}
   m_Layer: 8
   m_Name: Ennemy_Worm
   m_TagString: Enemy
@@ -90,12 +92,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Worm
-  PlayEvent: 5
+  PlayEvent: 11
   StopEvent: 2
   CollisionTag: Ground
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -139,6 +141,52 @@ MonoBehaviour:
   PlayEvent: 2
   StopEvent: 0
   CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6216874914953228816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208726619747923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/VOI/Enemy/Worm/VOI_Worm_Hit
+  PlayEvent: 5
+  StopEvent: 0
+  CollisionTag: Weapon
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6579317740813292952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208726619747923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/VOI/Enemy/Worm/VOI_Worm_Attack
+  PlayEvent: 5
+  StopEvent: 0
+  CollisionTag: Player
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

@@ -114,6 +114,6 @@ public class PlayerController : MonoBehaviour
     {
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots /= boostMultiplicator;
         yield return new WaitForSeconds(boostTime);
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator;
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator; 
     }
 }
