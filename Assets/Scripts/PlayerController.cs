@@ -142,11 +142,11 @@ public class PlayerController : Grounded
         healthPoints = healthPoints - damage;
         printHP();
         UILESSLIFE();
-        if (healthPoints <= 30 && healthPoints > 0)
+        /*if (healthPoints <= 30 && healthPoints > 0)
         {
             HEALTHAPPLE();
-        }
-        else if (healthPoints <= 0)
+        }*/
+       if (healthPoints <= 0)
         {
             Debug.Log("GameOver");
             healthPoints = 0;
