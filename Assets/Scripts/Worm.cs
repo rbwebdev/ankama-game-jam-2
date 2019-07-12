@@ -39,6 +39,7 @@ public class Worm : Mob
             Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
             rigidbody.isKinematic = true;
             Collider2D collider = gameObject.transform.GetChild(0).GetComponent<Collider2D>();
+            collider.enabled = false;
             collision.gameObject.GetComponentInParent<PlayerController>().TakeDamage(damage);
             Dead();
         }

@@ -155,8 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0530d468683e10847abba21ccbf64fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   healValue: 0
 --- !u!114 &3175356975365426079
+=======
+  healValue: 5
+--- !u!114 &6691915682679063501
+>>>>>>> 3474fecadcb68f303f6ec8705973e664a4a0e108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

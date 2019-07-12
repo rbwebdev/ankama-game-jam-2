@@ -43,7 +43,7 @@ public class Mob : MonoBehaviour
         dead = true;
         if (animator)
         {
-            animator.SetBool("isDeath", true);
+            animator.SetBool("isDead", true);
         }
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
