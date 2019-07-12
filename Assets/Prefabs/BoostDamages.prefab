@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 375442960272858237}
   - component: {fileID: 474358656011314311}
   - component: {fileID: 5764051078582107900}
-  - component: {fileID: 3399132412499673020}
   m_Layer: 10
   m_Name: BoostDamages
   m_TagString: BoostDamages
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/GFX/Spell/GFX_Boost_Spider
-  PlayEvent: 5
+  PlayEvent: 2
   StopEvent: 0
   CollisionTag: Player
   AllowFadeout: 1

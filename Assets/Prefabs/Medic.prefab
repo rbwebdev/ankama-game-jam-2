@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7589504992179915204}
   - component: {fileID: -1067446469480078738}
   - component: {fileID: 2603784394646088230}
-  - component: {fileID: 6691915682679063501}
+  - component: {fileID: 3175356975365426079}
   m_Layer: 10
   m_Name: Medic
   m_TagString: Medic

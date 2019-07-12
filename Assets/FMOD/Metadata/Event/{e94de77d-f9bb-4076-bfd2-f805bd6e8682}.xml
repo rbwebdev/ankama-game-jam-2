@@ -5,7 +5,7 @@
             <value>VOI_Apple_Death</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="folder">
             <destination>{1dbed5b8-c261-430d-a7f1-f5b0c0ab6c6f}</destination>
@@ -123,7 +123,6 @@
     <object class="MixerBusEffectChain" id="{63467073-7e78-4fbd-a7ff-f3be0b76b9f3}">
         <relationship name="effects">
             <destination>{fe206b90-d74a-443e-80fe-01ba3153b5a2}</destination>
-            <destination>{238b1024-1234-4ee0-9768-4d105cd5d5a0}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{2494f3fd-109c-4403-a97a-b291f54ea248}"/>
@@ -156,6 +155,5 @@
     </object>
     <object class="MixerBusPanner" id="{83a09144-fe7d-452a-926c-194496f5deaa}"/>
     <object class="MixerBusFader" id="{fe206b90-d74a-443e-80fe-01ba3153b5a2}"/>
-    <object class="SpatialiserEffect" id="{238b1024-1234-4ee0-9768-4d105cd5d5a0}"/>
     <object class="MixerBusFader" id="{2f306190-12b8-4b14-a419-fad59a6a3906}"/>
 </objects>

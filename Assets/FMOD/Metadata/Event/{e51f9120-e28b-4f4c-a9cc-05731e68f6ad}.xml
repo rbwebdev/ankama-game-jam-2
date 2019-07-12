@@ -5,7 +5,7 @@
             <value>FOL_GEN_Footsteps_Apple</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="folder">
             <destination>{be3481fd-1fce-4967-bfa5-e0f485438ba9}</destination>
@@ -119,7 +119,6 @@
     <object class="MixerBusEffectChain" id="{7e718041-253c-48f8-987b-962ea05376ab}">
         <relationship name="effects">
             <destination>{3254be1e-0fcc-4e46-833f-b113c5576dec}</destination>
-            <destination>{5796950b-a2ee-45eb-aec3-2d0496cec0d4}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{6b44bc9d-365b-41cf-9307-d783c01799e5}"/>
@@ -166,16 +165,5 @@
     </object>
     <object class="MixerBusPanner" id="{eec3f30e-a902-4d76-a1a3-d487ce8f9a5f}"/>
     <object class="MixerBusFader" id="{3254be1e-0fcc-4e46-833f-b113c5576dec}"/>
-    <object class="SpatialiserEffect" id="{5796950b-a2ee-45eb-aec3-2d0496cec0d4}">
-        <property name="distanceRolloffType">
-            <value>1</value>
-        </property>
-        <property name="minimumDistance">
-            <value>0</value>
-        </property>
-        <property name="maximumDistance">
-            <value>17</value>
-        </property>
-    </object>
     <object class="MixerBusFader" id="{d37d0656-7196-4bc4-b336-cf95e4faaeeb}"/>
 </objects>

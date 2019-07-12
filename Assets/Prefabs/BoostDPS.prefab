@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5959051906271258173}
   - component: {fileID: -3007951880076776048}
   - component: {fileID: 4571163535669229265}
-  - component: {fileID: 5421815126836201980}
   m_Layer: 10
   m_Name: BoostDPS
   m_TagString: BoostDPS
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/GFX/Spell/GFX_Boost_Wasp
-  PlayEvent: 5
+  PlayEvent: 2
   StopEvent: 0
   CollisionTag: Player
   AllowFadeout: 1
