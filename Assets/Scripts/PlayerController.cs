@@ -165,7 +165,10 @@ public class PlayerController : MonoBehaviour
 
    private void printHP()
    {
-        textHP.text = healthPoints.ToString() + "%";
+        if (textHP != null)
+        {
+            textHP.text = healthPoints.ToString() + "%";
+        }
    }
 
    //private void printAmmo()
@@ -191,11 +194,11 @@ public class PlayerController : MonoBehaviour
         //printDamages();
         if (dspBoosted)
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(197.5f, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(102.5f, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         else
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DamagesBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
@@ -203,7 +206,7 @@ public class PlayerController : MonoBehaviour
         //printDamages();
         if (dspBoosted)
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DamagesBoostedSprite.SetActive(false);
     }
@@ -215,11 +218,11 @@ public class PlayerController : MonoBehaviour
         //printAmmo();
         if (damagesBoosted)
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(197.5f, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(102.5f, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         else
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
@@ -227,7 +230,7 @@ public class PlayerController : MonoBehaviour
         //printAmmo();
         if (damagesBoosted)
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(false);
     }
