@@ -168,6 +168,9 @@ GameObject:
   - component: {fileID: 3745333657848586165}
   - component: {fileID: 3745333657848586154}
   - component: {fileID: 3745333657848586155}
+  - component: {fileID: 6258376443238298324}
+  - component: {fileID: -7397872925267884948}
+  - component: {fileID: 2840370941690541557}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Enemy
@@ -254,6 +257,75 @@ MonoBehaviour:
   - {fileID: 0}
   currentWayPoint: 0
   speed: 4
+--- !u!114 &6258376443238298324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745333657848586166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Hand
+  PlayEvent: 9
+  StopEvent: 0
+  CollisionTag: Ground
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &-7397872925267884948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745333657848586166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FOL/Gen/Death/FOL_GEN_Death_Hand
+  PlayEvent: 2
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2840370941690541557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745333657848586166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FOL/Gen/Impact/FOL_GEN_Impact
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3745333658542732107
 GameObject:
   m_ObjectHideFlags: 0
