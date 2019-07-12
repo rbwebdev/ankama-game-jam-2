@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpPower;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     float targetMoveSpeed;
     private Vector2 mouse;
+
 
     private void Start()
     {
@@ -189,6 +191,7 @@ public class PlayerController : MonoBehaviour
         }
         DPSBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
+<<<<<<< HEAD
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots;
         printAmmo();
         if (damagesBoosted)
@@ -196,5 +199,8 @@ public class PlayerController : MonoBehaviour
             DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(false);
+=======
+        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator; 
+>>>>>>> master
     }
 }

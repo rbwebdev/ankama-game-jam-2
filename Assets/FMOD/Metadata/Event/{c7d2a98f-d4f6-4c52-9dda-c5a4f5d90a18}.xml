@@ -130,7 +130,7 @@
     <object class="MixerBusPanner" id="{2afbb6f7-bf95-4f11-877d-5e48f1285f9d}"/>
     <object class="ThreeEQEffect" id="{5fce548b-f0c9-45f0-a70c-9329fe8788ed}">
         <property name="lowGain">
-            <value>-22.5</value>
+            <value>-9</value>
         </property>
         <property name="midGain">
             <value>-11.5</value>
