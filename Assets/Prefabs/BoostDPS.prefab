@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5959051906271258173}
   - component: {fileID: -3007951880076776048}
   - component: {fileID: 4571163535669229265}
-  - component: {fileID: 5421815126836201980}
   m_Layer: 10
   m_Name: BoostDPS
   m_TagString: BoostDPS
@@ -96,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f47aa7e9bbe3e4458e636c24e1d9f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BoostAudio: event:/UI/Life/Boost
 --- !u!61 &5959051906271258173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,26 +157,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplicator: 4
   boostTime: 20
---- !u!114 &5421815126836201980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4720042558365477258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/GFX/Spell/GFX_Boost_Wasp
-  PlayEvent: 2
-  StopEvent: 0
-  CollisionTag: Player
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
