@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using FMOD.Studio;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Grounded
 {
     [FMODUnity.EventRef]
     public string BoostAudio = "event:/UI/Life/Boost";
@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpPower;
-    public bool isGrounded;
     public GameObject weaponSprite;
     public TMP_Text textHP;
     //public TMP_Text textAmmo;

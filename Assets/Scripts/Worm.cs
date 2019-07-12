@@ -16,7 +16,8 @@ public class Worm : Mob
     // Update is called once per frame
     void Update()
     {
-        if (follow && !dead)
+        animator.SetBool("isGrounded", isGrounded);
+        if (follow && isGrounded && !dead)
         {
             Transform player = GetTransformPlayer();
             Vector2 target = new Vector2(player.position.x, transform.position.y);

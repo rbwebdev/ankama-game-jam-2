@@ -5,13 +5,12 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public List<SpawnList> waves;
+    public List<SpawnerWave> waves;
     public int currentWave = 0;
 
     private int waveSize = 0;
     private int mobDead = 0;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         SpawnWave(currentWave);
@@ -27,17 +26,40 @@ public class Spawner : MonoBehaviour
             {
                 SpawnWave(currentWave);
             }
-            
+
         }
     }
 
-    private void SpawnWave(int wave)
+    private void SpawnWave(int waveNumber)
     {
-        waveSize = waves[wave].list.ToArray().Length;
+        SpawnerWave wave = waves[waveNumber];
+        waveSize = wave.mobNumer;
         mobDead = 0;
-        foreach (Spawn spawn in waves[wave].list)
+        if (wave.eventName != null)
         {
-            StartCoroutine(SpwanMob(spawn.mob, spawn.position, spawn.delay));
+            IEvent ev = (IEvent)gameObject.GetComponent(wave.eventName);
+            if (ev != null)
+            {
+                ev.Trigger();
+            } 
+        } 
+        if (waveSize > 0)
+        {
+            StartCoroutine(spawnWaveMobs(wave, wave.WaveDelay));
+        }
+    }
+
+    private IEnumerator spawnWaveMobs(SpawnerWave wave, float delayTime)
+    {
+        Debug.Log("ici");
+        yield return new WaitForSeconds(delayTime);
+        float maxTimeInterval = wave.SpawnTime / waveSize;
+        float delay = 0f;
+        for (int i = 0; i < waveSize; i++)
+        {
+            delay += Random.Range(0f, maxTimeInterval);
+            SpawnType type = wave.GetSpawnType();
+            StartCoroutine(SpwanMob(type.mob, type.GetTransform(), delay));
         }
     }
 

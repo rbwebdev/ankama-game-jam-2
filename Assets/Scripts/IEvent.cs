@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class SpawnList
+public interface IEvent
 {
-    public List<Spawn> list;
+    void Trigger();
 }

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bee8da5f96d77408b9fc699dfb4290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 540765432996359409}
+  objectGrounded: {fileID: 540765432996359409}
 --- !u!1 &540765431968544549
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,10 +350,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoostAudio: event:/UI/Life/Boost
   LessLifeAudio: event:/UI/Life/Life_less
+  isGrounded: 0
   rb: {fileID: 540765432996359410}
   moveSpeed: 250
   jumpPower: 16
-  isGrounded: 0
   weaponSprite: {fileID: 3947613444673771865}
   textHP: {fileID: 0}
   DPSBoostedSprite: {fileID: 0}

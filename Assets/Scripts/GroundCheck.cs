@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject objectGrounded;
 
      void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
-            player.GetComponent<PlayerController>().isGrounded = true;
+            objectGrounded.GetComponent<Grounded>().isGrounded = true;
         }
     }
 
@@ -18,7 +18,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            player.GetComponent<PlayerController>().isGrounded = false;
+            objectGrounded.GetComponent<Grounded>().isGrounded = false;
         }
     }
 }

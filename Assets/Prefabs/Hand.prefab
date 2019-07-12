@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b13c679a881c0540b7abca40f238965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   healthPoints: 200
   damage: 50
   destroyDelay: 1
@@ -253,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPointList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6544477124376055649, guid: d0ffe1245e4cfc34db44495a4b3691a2, type: 3}
+  - {fileID: 6216761595584796430, guid: d2a6ffa2775706e4094d3ab1c9d2a65b, type: 3}
   currentWayPoint: 0
   speed: 4
 --- !u!114 &6258376443238298324
