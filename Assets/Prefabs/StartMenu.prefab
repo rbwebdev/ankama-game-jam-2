@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 2322535020455238717}
   - component: {fileID: 2322535020455238718}
   - component: {fileID: 7461824685940020486}
-  - component: {fileID: 639709646187516751}
   - component: {fileID: 9036588751482029507}
   m_Layer: 5
   m_Name: StartMenu
@@ -420,29 +419,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/MUS/MUSIC_02
   PlayEvent: 1
-  StopEvent: 12
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!114 &639709646187516751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322535020455238719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: snapshot:/Start
-  PlayEvent: 11
   StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
