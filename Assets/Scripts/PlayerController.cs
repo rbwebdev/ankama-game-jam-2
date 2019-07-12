@@ -133,7 +133,10 @@ public class PlayerController : MonoBehaviour
 
    private void printHP()
    {
-        textHP.text = healthPoints.ToString() + "%";
+        if (textHP != null)
+        {
+            textHP.text = healthPoints.ToString() + "%";
+        }
    }
 
    //private void printAmmo()
