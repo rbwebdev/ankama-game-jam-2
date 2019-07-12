@@ -5,7 +5,7 @@
             <value>GFX_Boost_Spider</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="folder">
             <destination>{de584fae-e2e0-44e6-a530-8f831c2b43b2}</destination>
@@ -89,6 +89,9 @@
     </object>
     <object class="MixerBusPanner" id="{42dc84b5-339a-4348-90cc-b709606c150a}"/>
     <object class="SingleSound" id="{2365c543-131e-4040-a7b7-12f11f0f685b}">
+        <property name="length">
+            <value>0.57999999999999996</value>
+        </property>
         <relationship name="audioFile">
             <destination>{0b063543-2af9-4a22-9b4a-314fc8db524a}</destination>
         </relationship>
@@ -111,7 +114,6 @@
         <relationship name="effects">
             <destination>{d6252477-94f4-47e2-96b9-ab594259be82}</destination>
             <destination>{7db3e1ba-6d29-4ef6-b5ae-5ddecf21db5e}</destination>
-            <destination>{0b01bd14-ee84-4c30-a879-7eff0b502d3e}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{4f11090e-f056-4276-b51a-c85a82604cce}"/>
@@ -137,6 +139,5 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{7db3e1ba-6d29-4ef6-b5ae-5ddecf21db5e}"/>
-    <object class="SpatialiserEffect" id="{0b01bd14-ee84-4c30-a879-7eff0b502d3e}"/>
     <object class="MixerBusFader" id="{5f1f578a-c7e0-4832-a8a6-284be1785476}"/>
 </objects>

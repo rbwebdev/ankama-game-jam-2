@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 2695362703597720000}
   - component: {fileID: -2041882485811715185}
   - component: {fileID: 4895519807310190680}
+  - component: {fileID: -5942579504302801205}
   m_Layer: 9
   m_Name: Sting
   m_TagString: Untagged
@@ -240,9 +241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Impact/FOL_GEN_Impact
-  PlayEvent: 9
-  StopEvent: 10
-  CollisionTag: 
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -263,9 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/VOI/Apple/VOI_Apple_Hit
-  PlayEvent: 9
-  StopEvent: 10
-  CollisionTag: 
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -273,3 +274,26 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &-5942579504302801205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508270068579781750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/Life/Less_life
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
