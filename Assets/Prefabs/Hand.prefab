@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  healthPoints: 200
+  healthPoints: 50
   damage: 50
   destroyDelay: 1
   boost: {fileID: 0}
