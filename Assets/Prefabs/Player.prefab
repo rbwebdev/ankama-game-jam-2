@@ -301,6 +301,8 @@ GameObject:
   - component: {fileID: 540765432996359408}
   - component: {fileID: 540765432996359411}
   - component: {fileID: 540765432996359410}
+  - component: {fileID: 8827529764406494754}
+  - component: {fileID: 5176823984656644684}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -365,6 +367,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8827529764406494754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540765432996359409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FOL/Gen/Move/FOL_GEN_Jump_Apple
+  PlayEvent: 6
+  StopEvent: 5
+  CollisionTag: Ground
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 17
+--- !u!114 &5176823984656644684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540765432996359409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Apple
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Ground
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 17
 --- !u!1 &3947613444673771865
 GameObject:
   m_ObjectHideFlags: 0
