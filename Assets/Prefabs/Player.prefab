@@ -459,7 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/VOI/Apple/VOI_Apple_Death
   PlayEvent: 2
-  StopEvent: 0
+  StopEvent: 1
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0

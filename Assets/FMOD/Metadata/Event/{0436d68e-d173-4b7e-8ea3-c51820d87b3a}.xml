@@ -5,7 +5,7 @@
             <value>FOL_Gun_Shoot</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="folder">
             <destination>{54487a25-f7e1-4cda-a41a-7e22685c0493}</destination>
@@ -82,6 +82,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{12c7a614-3ceb-432f-b010-a293dc547de3}">
+        <property name="volume">
+            <value>-4.20000029</value>
+        </property>
         <relationship name="effectChain">
             <destination>{7dba93db-56e6-4e14-8192-20f19a395eb4}</destination>
         </relationship>
@@ -172,7 +175,6 @@
     <object class="MixerBusEffectChain" id="{7dba93db-56e6-4e14-8192-20f19a395eb4}">
         <relationship name="effects">
             <destination>{e886b9be-b80b-4f49-9999-20cdcffc8074}</destination>
-            <destination>{db6e54ff-9bf9-4919-af33-56e5fe56a5c9}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{f339bfcf-7c58-411b-9ce3-2bb17ecd69a6}"/>
@@ -246,7 +248,6 @@
     </object>
     <object class="MixerBusPanner" id="{1275c964-3adf-4f6a-bf87-d60e07de9c7b}"/>
     <object class="MixerBusFader" id="{e886b9be-b80b-4f49-9999-20cdcffc8074}"/>
-    <object class="SpatialiserEffect" id="{db6e54ff-9bf9-4919-af33-56e5fe56a5c9}"/>
     <object class="MixerBusFader" id="{25dcd033-4962-4ec9-b1b2-ff7308219b6a}"/>
     <object class="MixerBusFader" id="{82989c5d-7631-404b-8827-ef30917b4df3}"/>
 </objects>

@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Impact/FOL_GEN_Impact
   PlayEvent: 9
-  StopEvent: 0
+  StopEvent: 10
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/VOI/Apple/VOI_Apple_Hit
   PlayEvent: 9
-  StopEvent: 0
+  StopEvent: 10
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
