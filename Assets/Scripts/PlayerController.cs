@@ -5,7 +5,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-
+    [FMODUnity.EventRef]
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpPower;
