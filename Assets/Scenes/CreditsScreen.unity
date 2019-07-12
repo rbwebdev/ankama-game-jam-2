@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 141817275}
   - component: {fileID: 141817274}
   m_Layer: 5
-  m_Name: TMP SubMeshUI [GrindAndDeath_Demo SDF Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [BoardMarker Atlas Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.615625
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 141817275}
   m_TextComponent: {fileID: 168873459}
   m_materialReferenceIndex: 1
@@ -947,5 +947,44 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1973133198320168828, guid: 50b167dc6bc281d489a90036893eb31c,
+        type: 3}
+      propertyPath: m_text
+      value: "CREDITS\n\n- Abel Castillo-cattells -\n- Emilien Barthelemy -\n- Guillaume
+        Coudriau -\n- Jonathan Jorand -\n- M\xE9lanie Moretti - \n- Romain Brasier
+        -"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973133198320168828, guid: 50b167dc6bc281d489a90036893eb31c,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 141817274}
+    - target: {fileID: 1973133198320168828, guid: 50b167dc6bc281d489a90036893eb31c,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1973133198489002640}
+    - target: {fileID: 1973133198320168828, guid: 50b167dc6bc281d489a90036893eb31c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071421144942052198, guid: 50b167dc6bc281d489a90036893eb31c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b167dc6bc281d489a90036893eb31c, type: 3}
+--- !u!114 &1973133198489002640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8224117470209238101, guid: 50b167dc6bc281d489a90036893eb31c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1973133198489002639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
