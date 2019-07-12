@@ -288,6 +288,7 @@ MonoBehaviour:
   projectile: {fileID: 6281935201827049906, guid: 57245bc4a7b0a454cb605e002fbd619e,
     type: 3}
   shotPoint: {fileID: 2013639321379782773}
+  sprite: {fileID: 3947613444673771865}
   startTimeBtwShots: 1
 --- !u!1 &540765432996359409
 GameObject:
@@ -315,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540765432996359409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.513, y: -3.52, z: 0}
+  m_LocalPosition: {x: 0, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 540765431700428448}
