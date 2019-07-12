@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{a5304a5a-de3e-4e10-990e-24ec472a6fc1}">
+        <property name="assetPath">
+            <value>Arcade_Click_Positive_03.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>10.005333333333333</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{48905772-42e9-46e4-83f2-6c399f67c426}</destination>
+        </relationship>
+    </object>
+</objects>

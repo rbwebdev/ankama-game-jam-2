@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Hand
-  PlayEvent: 9
+  PlayEvent: 5
   StopEvent: 0
   CollisionTag: Ground
   AllowFadeout: 1
