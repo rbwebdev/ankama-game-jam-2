@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/GFX/Spell/GFX_Boost_Wasp
-  PlayEvent: 5
+  PlayEvent: 2
   StopEvent: 0
   CollisionTag: Player
   AllowFadeout: 1
