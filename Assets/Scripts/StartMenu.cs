@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public static bool gameIsStart = false;
     public GameObject startMenuUI;
 
-    public void StartGame()
+    public void PlayGame()
     {
-        Debug.Log("Start");
-        SceneManager.LoadScene("RomainSandBox");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUIT !");
+        Application.Quit();
     }
 }
