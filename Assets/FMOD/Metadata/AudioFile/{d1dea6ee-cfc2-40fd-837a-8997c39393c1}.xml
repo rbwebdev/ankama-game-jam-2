@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{d1dea6ee-cfc2-40fd-837a-8997c39393c1}">
         <property name="assetPath">
-            <value>Arcade_Click_Negative_18.wav</value>
+            <value>UI/Arcade_Click_Negative_18.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

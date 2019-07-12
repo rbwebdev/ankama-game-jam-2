@@ -16,9 +16,11 @@
     </object>
     <object class="MixerBusEffectChain" id="{d2c7aab2-2725-4732-be50-35cabd4bac52}">
         <relationship name="effects">
+            <destination>{4ab2956c-d0e9-4de9-b194-e6a39a2d4a1c}</destination>
             <destination>{011505ce-8e0a-4c86-b2e1-3c5d32abf6ed}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{4e048f40-a4cc-42de-80a0-4b8d3ec199b4}"/>
+    <object class="ThreeEQEffect" id="{4ab2956c-d0e9-4de9-b194-e6a39a2d4a1c}"/>
     <object class="MixerBusFader" id="{011505ce-8e0a-4c86-b2e1-3c5d32abf6ed}"/>
 </objects>
