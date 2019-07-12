@@ -7,11 +7,22 @@ public class Hand : Mob
 
     public float cooldownMin;
     public float cooldownMax;
+    public float speed;
+    public float jerkyTime;
+    public float fallingTime;
+    public float gravityScale;
+
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(crush(Random.Range(cooldownMin, cooldownMax)));
+        animator = transform.Find("Sprite").GetComponent<Animator>();
+        StartCoroutine(Crush(Random.Range(cooldownMin, cooldownMax)));
+        gameObject.GetComponent<WayPoints>().speed = speed;
+
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
     }
 
     // Update is called once per frame
@@ -20,28 +31,61 @@ public class Hand : Mob
 
     }
 
-    private IEnumerator crush(float delayTime)
+    private IEnumerator Crush(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
         if (!dead)
         {
-            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-            rb.isKinematic = false;
+            animator.SetBool("shake", true);
             gameObject.GetComponent<WayPoints>().speed = 0;
-            StartCoroutine(relax(1f));
-
+            StartCoroutine(Falldown(jerkyTime));
         }
     }
 
-    private IEnumerator relax(float delayTime)
+    private IEnumerator Falldown(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
         if (!dead)
         {
-            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-            rb.isKinematic = true;
-            gameObject.GetComponent<WayPoints>().speed = 6;
-            StartCoroutine(crush(Random.Range(cooldownMin, cooldownMax)));
+            animator.SetBool("shake", false);
+            animator.SetBool("falling", false);
+            rb.gravityScale = gravityScale;
+            StartCoroutine(Relax(fallingTime));
+        }
+    }
+
+    private IEnumerator Relax(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        if (!dead)
+        {
+            rb.gravityScale = 0;
+            animator.SetBool("grounded", false);
+            gameObject.GetComponent<WayPoints>().speed = speed;
+            StartCoroutine(Crush(Random.Range(cooldownMin, cooldownMax)));
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponentInParent<PlayerController>().TakeDamage(damage);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            animator.SetBool("falling", false);
+            animator.SetBool("grounded", true);
+            GameObject player = GetTransformPlayer().gameObject;
+            if(player.GetComponent<PlayerController>().isGrounded)
+            {
+                player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 200);
+            }
+            Camera.main.GetComponent<CameraShake>().shakeDuration = 0.1f;
         }
     }
 }
