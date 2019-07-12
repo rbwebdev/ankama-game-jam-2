@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 375442960272858237}
   - component: {fileID: 474358656011314311}
   - component: {fileID: 5764051078582107900}
-  - component: {fileID: 3399132412499673020}
   m_Layer: 10
   m_Name: BoostDamages
   m_TagString: BoostDamages
@@ -96,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f47aa7e9bbe3e4458e636c24e1d9f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BoostAudio: event:/UI/Life/Boost
 --- !u!50 &375442960272858237
 Rigidbody2D:
   serializedVersion: 4

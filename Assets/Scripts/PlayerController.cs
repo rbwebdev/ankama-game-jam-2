@@ -2,18 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMOD.Studio;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Grounded
 {
     [FMODUnity.EventRef]
+    public string BoostAudio = "event:/UI/Life/Boost";
+    public FMOD.Studio.EventInstance UIBoost;
+    public FMOD.Studio.ParameterInstance UIBoostPar;
+    public string LessLifeAudio = "event:/UI/Life/Life_Less";
+    public FMOD.Studio.EventInstance UILesslife;
+    public FMOD.Studio.ParameterInstance UILesslifePar;
+    public string VOIBoost = "event:/VOI/Apple/VOI_Apple_Boost";
+    public FMOD.Studio.EventInstance VoiBoost;
+    public FMOD.Studio.ParameterInstance VoiBoostPar;
+    public string DPSBoost = "event:/GFX/Spell/GFX_Boost_Wasp";
+    public FMOD.Studio.EventInstance dpsboost;
+    public FMOD.Studio.ParameterInstance dpsboostPar;
+    public string MEDICBoost = "event:/GFX/Spell/GFX_Boost_Worm";
+    public FMOD.Studio.EventInstance medicboost;
+    public FMOD.Studio.ParameterInstance medicboostPar;
+    public string DAMAGEBoost = "event:/GFX/Spell/GFX_Boost_Spider";
+    public FMOD.Studio.EventInstance damageboost;
+    public FMOD.Studio.ParameterInstance damageboostPar;
+    public string DeathAudio = "event:/VOI/Apple/VOI_Apple_Death";
+    public FMOD.Studio.EventInstance DeathApple;
+    public FMOD.Studio.ParameterInstance DeathApplePar;
+    public string HealthAudio = "event:/UI/Life/Life_Low";
+    public FMOD.Studio.EventInstance HealthApple;
+    public FMOD.Studio.ParameterInstance HealthApplePar;
+
+
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpPower;
     public GameObject weaponSprite;
     public TMP_Text textHP;
-    //public TMP_Text textAmmo;
-    //public TMP_Text textDamages;
-    //public TMP_Text textPoints;
     public GameObject DPSBoostedSprite;
     public GameObject DamagesBoostedSprite;
 
@@ -23,7 +48,6 @@ public class PlayerController : Grounded
 
     private bool dspBoosted = false;
     private bool damagesBoosted = false;
-    //private int points = 0;
 
     float targetMoveSpeed;
     private Vector2 mouse;
@@ -34,9 +58,6 @@ public class PlayerController : Grounded
         isGrounded = true;
         healthPointsForReset = healthPoints;
         printHP();
-        //printAmmo();
-        //printDamages();
-        //printPoints();
     }
 
     private void Update()
@@ -74,6 +95,9 @@ public class PlayerController : Grounded
         {
             float healValue = collision.gameObject.GetComponent<Medic>().healValue;
             float tmpHeal = healthPoints + healValue;
+            Destroy(collision.gameObject);
+            MEDICBOOST();
+            UIBOOST();
             if (tmpHeal < healthPointsForReset)
             {
                 healthPoints = healthPoints + healValue;
@@ -83,13 +107,14 @@ public class PlayerController : Grounded
                 healthPoints = healthPointsForReset;
             }
             printHP();
-            Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "BoostDamages")
         {
             float boostPoints = collision.gameObject.GetComponent<BoostDamages>().boostPoints;
             float boostTime = collision.gameObject.GetComponent<BoostDamages>().boostTime;
             Destroy(collision.gameObject);
+            DAMAGEBOOST();
+            UIBOOST();
             if (!damagesBoosted)
             {
                 damagesBoosted = true;
@@ -101,6 +126,9 @@ public class PlayerController : Grounded
             float boostMultiplicator = collision.gameObject.GetComponent<BoostDPS>().boostMultiplicator;
             float boostTime = collision.gameObject.GetComponent<BoostDPS>().boostTime;
             Destroy(collision.gameObject);
+            UIBOOST();
+            DSPBOOST();
+
             if (!dspBoosted)
             {
                 dspBoosted = true;
@@ -111,24 +139,27 @@ public class PlayerController : Grounded
 
     public void TakeDamage(float damage)
     {
-        healthPoints -= damage;
+        healthPoints = healthPoints - damage;
         printHP();
-        if (healthPoints <= 0)
+        UILESSLIFE();
+        if (healthPoints <= 30 && healthPoints > 0)
         {
+            HEALTHAPPLE();
+        }
+        else if (healthPoints <= 0)
+        {
+            Debug.Log("GameOver");
+            healthPoints = 0;
+            printHP();
             GameOver();
         }
     }
 
-    //public void TakePoints(int takePoints)
-    //{
-    //    points += takePoints;
-    //    printPoints();
-    //}
-
     void GameOver()
    {
-        Destroy(gameObject);
-   }
+        DEATHAPPLE();
+        SceneManager.LoadScene("GameOverScreen");
+    }
 
    private void printHP()
    {
@@ -138,27 +169,9 @@ public class PlayerController : Grounded
         }
    }
 
-   //private void printAmmo()
-   //{
-   //     float tmpStartTimeBtwShots = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots;
-   //     float tmpAmmo = 1 / tmpStartTimeBtwShots;
-   //     textAmmo.text = "Ammo: " + tmpAmmo + "/s";
-   //}
-
-   //private void printDamages()
-   //{
-   //     textDamages.text = "Damages: " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage + "/hit";
-   //}
-
-   //private void printPoints()
-   //{
-   //     textPoints.text = "Points: " + points.ToString();
-   //}
-
     IEnumerator BoostDamages(float boostPoints, float boostTime)
    {
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage + boostPoints;
-        //printDamages();
         if (dspBoosted)
         {
             DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(102.5f, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
@@ -170,7 +183,6 @@ public class PlayerController : Grounded
         DamagesBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage - boostPoints;
-        //printDamages();
         if (dspBoosted)
         {
             DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
@@ -182,7 +194,6 @@ public class PlayerController : Grounded
     {
         float tmpStartTimeBtwShots = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots;
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots / boostMultiplicator;
-        //printAmmo();
         if (damagesBoosted)
         {
             DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(102.5f, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
@@ -194,11 +205,48 @@ public class PlayerController : Grounded
         DPSBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots;
-        //printAmmo();
         if (damagesBoosted)
         {
             DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(false);
+    }
+
+    void UIBOOST()
+    {
+        UIBoost = FMODUnity.RuntimeManager.CreateInstance(BoostAudio);
+        UIBoost.start();
+        VoiBoost = FMODUnity.RuntimeManager.CreateInstance(VOIBoost);
+        VoiBoost.start();
+    }
+    void UILESSLIFE()
+    {
+        UILesslife = FMODUnity.RuntimeManager.CreateInstance(LessLifeAudio);
+        UILesslife.start();
+    }
+    void DSPBOOST()
+    {
+        dpsboost = FMODUnity.RuntimeManager.CreateInstance(DPSBoost);
+        dpsboost.start();
+    }
+    void DAMAGEBOOST()
+    {
+        damageboost = FMODUnity.RuntimeManager.CreateInstance(DAMAGEBoost);
+        damageboost.start();
+    }
+    void MEDICBOOST()
+    {
+        medicboost = FMODUnity.RuntimeManager.CreateInstance(MEDICBoost);
+        medicboost.start();
+    }
+    void DEATHAPPLE()
+    {
+        DeathApple = FMODUnity.RuntimeManager.CreateInstance(DeathAudio);
+        DeathApple.start();
+    }
+    void HEALTHAPPLE()
+    {
+        HealthApple = FMODUnity.RuntimeManager.CreateInstance(HealthAudio);
+        HealthApple.start();
     }
 }

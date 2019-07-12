@@ -5,7 +5,7 @@
             <value>VOI_Apple_Boost</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="folder">
             <destination>{1dbed5b8-c261-430d-a7f1-f5b0c0ab6c6f}</destination>
@@ -103,6 +103,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{1c28a43c-9468-44f5-98c0-588577139fce}">
+        <property name="volume">
+            <value>-17.5</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -119,7 +122,6 @@
     <object class="MixerBusEffectChain" id="{7ed4c064-e533-4bbe-8a68-d293acc6574b}">
         <relationship name="effects">
             <destination>{9f98a543-44ff-45a9-ad76-89834b7e1fd8}</destination>
-            <destination>{87a7ae4d-a4e2-4909-92df-313fb7d8f4f5}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{51c054d0-1dda-4288-adba-03f59f04e7a5}"/>
@@ -139,6 +141,5 @@
     </object>
     <object class="MixerBusPanner" id="{4cfbe5b4-f688-4c92-87ed-751c2dc0653a}"/>
     <object class="MixerBusFader" id="{9f98a543-44ff-45a9-ad76-89834b7e1fd8}"/>
-    <object class="SpatialiserEffect" id="{87a7ae4d-a4e2-4909-92df-313fb7d8f4f5}"/>
     <object class="MixerBusFader" id="{24f94b7a-b229-433d-b691-7efd24bbd7a9}"/>
 </objects>

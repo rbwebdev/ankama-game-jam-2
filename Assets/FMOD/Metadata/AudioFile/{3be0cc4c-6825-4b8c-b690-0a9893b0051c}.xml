@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{3be0cc4c-6825-4b8c-b690-0a9893b0051c}">
         <property name="assetPath">
-            <value>Breathing Drone.wav</value>
+            <value>MUS/Breathing Drone.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

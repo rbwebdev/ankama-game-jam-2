@@ -67,8 +67,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffb8d19824afa4749a1c8796ac255332, type: 2}
-  m_sharedMaterial: {fileID: -3767547615848865108, guid: ffb8d19824afa4749a1c8796ac255332,
+  m_fontAsset: {fileID: 11400000, guid: 28d60711f575fb0439671dcccd43789d, type: 2}
+  m_sharedMaterial: {fileID: 5359088710970525817, guid: 28d60711f575fb0439671dcccd43789d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -595,8 +595,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffb8d19824afa4749a1c8796ac255332, type: 2}
-  m_sharedMaterial: {fileID: -3767547615848865108, guid: ffb8d19824afa4749a1c8796ac255332,
+  m_fontAsset: {fileID: 11400000, guid: 28d60711f575fb0439671dcccd43789d, type: 2}
+  m_sharedMaterial: {fileID: 5359088710970525817, guid: 28d60711f575fb0439671dcccd43789d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -753,8 +753,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: CREDITS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffb8d19824afa4749a1c8796ac255332, type: 2}
-  m_sharedMaterial: {fileID: -3767547615848865108, guid: ffb8d19824afa4749a1c8796ac255332,
+  m_fontAsset: {fileID: 11400000, guid: 28d60711f575fb0439671dcccd43789d, type: 2}
+  m_sharedMaterial: {fileID: 5359088710970525817, guid: 28d60711f575fb0439671dcccd43789d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

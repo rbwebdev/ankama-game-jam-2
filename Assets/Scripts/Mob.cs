@@ -38,7 +38,7 @@ public class Mob : Grounded
         healthPoints -= damage;
         if (healthPoints <= 0)
         {
-            Debug.Log("dead");
+            //Debug.Log("dead");
             Dead();
         } else
         {

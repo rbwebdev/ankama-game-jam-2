@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{30798090-6d43-41b1-8afd-9f23dca7bc3d}">
         <property name="name">
-            <value>Less_life</value>
+            <value>Life_Less</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
@@ -53,7 +53,7 @@
             <destination>{662f6739-08c8-4691-8902-a36c011fecda}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{6187567c-763b-4a5b-95fa-3337f0a64297}</destination>
+            <destination>{73ad5b5a-d09d-4dad-80b7-37a5c986a6a8}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{e86c33a4-beb6-493c-bb0e-5ffbd5920cb3}"/>
@@ -100,6 +100,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{ff2d14eb-31d3-4403-9784-7fce433db2e0}">
+        <property name="volume">
+            <value>2</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
