@@ -174,6 +174,8 @@ GameObject:
   - component: {fileID: 6279421775429289901}
   - component: {fileID: -3941267737476403079}
   - component: {fileID: -2435323069793090236}
+  - component: {fileID: 477231968097825035}
+  - component: {fileID: -966361809730612014}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Enemy
@@ -244,6 +246,7 @@ MonoBehaviour:
   jerkyTime: 0.3
   fallingTime: 1
   gravityScale: 20
+  MusicBoss: event:/MUS/MUSIC_01
 --- !u!114 &3745333657848586155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +392,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: snapshot:/Boss
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &477231968097825035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745333657848586166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/GFX/Open_Box
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &-966361809730612014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745333657848586166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/MUS/MUSIC_Boss
   PlayEvent: 1
   StopEvent: 2
   CollisionTag: 

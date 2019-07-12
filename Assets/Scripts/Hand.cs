@@ -81,7 +81,7 @@ public class Hand : Mob
             animator.SetBool("falling", false);
             animator.SetBool("grounded", true);
             GameObject player = GetTransformPlayer().gameObject;
-            if(player.GetComponent<PlayerController>().isGrounded)
+            if (player.GetComponent<PlayerController>().isGrounded)
             {
                 player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 200);
             }
