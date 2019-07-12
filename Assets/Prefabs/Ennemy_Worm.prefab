@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 572208726619747920}
   - component: {fileID: 3770563843516852723}
   - component: {fileID: -28637102734356092}
-  - component: {fileID: 6455422890184541470}
+  - component: {fileID: 9168391092874667573}
   m_Layer: 8
   m_Name: Ennemy_Worm
   m_TagString: Enemy
@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Worm
-  PlayEvent: 1
-  StopEvent: 0
-  CollisionTag: 
+  PlayEvent: 5
+  StopEvent: 2
+  CollisionTag: Ground
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &6455422890184541470
+--- !u!114 &9168391092874667573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Worm
-  PlayEvent: 5
+  Event: event:/VOI/Enemy/Worm/VOI_Worm_Death
+  PlayEvent: 2
   StopEvent: 0
-  CollisionTag: Player
+  CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

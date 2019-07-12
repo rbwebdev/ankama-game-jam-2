@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpPower;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     float targetMoveSpeed;
     private Vector2 mouse;
+
 
     private void Start()
     {

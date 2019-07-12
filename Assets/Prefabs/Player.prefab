@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Apple
-  PlayEvent: 5
-  StopEvent: 6
-  CollisionTag: Ground
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: Medic
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/FOL/Gen/Impact/FOL_GEN_Impact
-  PlayEvent: 5
+  PlayEvent: 9
   StopEvent: 0
   CollisionTag: Enemy
   AllowFadeout: 1
