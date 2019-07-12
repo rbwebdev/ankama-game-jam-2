@@ -191,7 +191,6 @@ public class PlayerController : MonoBehaviour
         }
         DPSBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
-<<<<<<< HEAD
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots;
         printAmmo();
         if (damagesBoosted)
@@ -199,8 +198,6 @@ public class PlayerController : MonoBehaviour
             DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(false);
-=======
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator; 
->>>>>>> master
     }
 }
