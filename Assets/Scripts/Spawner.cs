@@ -51,7 +51,6 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator spawnWaveMobs(SpawnerWave wave, float delayTime)
     {
-        Debug.Log("ici");
         yield return new WaitForSeconds(delayTime);
         float maxTimeInterval = wave.SpawnTime / waveSize;
         float delay = 0f;

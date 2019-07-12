@@ -28,12 +28,9 @@ public class PlayerController : Grounded
     public string DeathAudio = "event:/VOI/Apple/VOI_Apple_Death";
     public FMOD.Studio.EventInstance DeathApple;
     public FMOD.Studio.ParameterInstance DeathApplePar;
-<<<<<<< HEAD
-=======
     public string HealthAudio = "event:/UI/Life/Life_Low";
     public FMOD.Studio.EventInstance HealthApple;
     public FMOD.Studio.ParameterInstance HealthApplePar;
->>>>>>> SOUND
 
 
     public Rigidbody2D rb;
@@ -135,14 +132,9 @@ public class PlayerController : Grounded
             float boostMultiplicator = collision.gameObject.GetComponent<BoostDPS>().boostMultiplicator;
             float boostTime = collision.gameObject.GetComponent<BoostDPS>().boostTime;
             Destroy(collision.gameObject);
-<<<<<<< HEAD
-            DSPBOOST();
-            UIBOOST();
-=======
             UIBOOST();
             DSPBOOST();
-            
->>>>>>> SOUND
+
             if (!dspBoosted)
             {
                 dspBoosted = true;
@@ -156,15 +148,11 @@ public class PlayerController : Grounded
         healthPoints -= damage;
         printHP();
         UILESSLIFE();
-<<<<<<< HEAD
-        if (healthPoints <= 0)
-=======
         if (healthPoints <= 30)
         {
             HEALTHAPPLE();
         }
         else if (healthPoints <= 0)
->>>>>>> SOUND
         {
             GameOver();
         }
@@ -286,12 +274,9 @@ public class PlayerController : Grounded
         DeathApple = FMODUnity.RuntimeManager.CreateInstance(DeathAudio);
         DeathApple.start();
     }
-<<<<<<< HEAD
-=======
     void HEALTHAPPLE()
     {
         HealthApple = FMODUnity.RuntimeManager.CreateInstance(HealthAudio);
         HealthApple.start();
     }
->>>>>>> SOUND
 }
