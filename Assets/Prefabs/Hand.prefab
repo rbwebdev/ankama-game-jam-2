@@ -246,7 +246,6 @@ MonoBehaviour:
   jerkyTime: 0.3
   fallingTime: 1
   gravityScale: 20
-  MusicBoss: event:/MUS/MUSIC_01
 --- !u!114 &3745333657848586155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/MUS/MUSIC_Boss
+  Event: event:/MUS/MUSIC_03
   PlayEvent: 1
   StopEvent: 2
   CollisionTag: 

@@ -102,7 +102,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -569778566837874299}
+  - {fileID: 4814267017929191710}
   MinDistance: 0
   MaxDistance: 0
   Length: 110800
@@ -291,8 +291,8 @@ MonoBehaviour:
   Path: event:/UI/Game-Over/GFX_Game_Over
   guid: 9301b8575b47c540ae58dd0aaa649dd3
   Banks:
-  - {fileID: 430801719914574346}
   - {fileID: -2646201369601821928}
+  - {fileID: 430801719914574346}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -607,8 +607,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3963533663856724971}
-  - {fileID: -949555141599369674}
+  - {fileID: 6474013172104969216}
   MinDistance: 0
   MaxDistance: 0
   Length: 185600
@@ -671,7 +670,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1011765394318228439}
+  - {fileID: 1253022425102536556}
   MinDistance: 0
   MaxDistance: 0
   Length: 112013
@@ -688,11 +687,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636985637070091847
+  lastModified: 636985654782697236
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 4096
+    Value: 4080
   Exists: 1
 --- !u!114 &-3501971624444685030
 MonoBehaviour:
@@ -1120,7 +1119,6 @@ MonoBehaviour:
   - {fileID: -4414712779820063059}
   - {fileID: -2849596046445301527}
   - {fileID: -8133481240552593984}
-  - {fileID: 3044596699404862529}
   - {fileID: -3903094262127086069}
   - {fileID: -4314722912020259424}
   - {fileID: -6156085237374917643}
@@ -1141,12 +1139,13 @@ MonoBehaviour:
   - {fileID: -8951420073369313690}
   - {fileID: 5355999341228556454}
   - {fileID: -3415189143484750971}
+  - {fileID: 2285704679250532463}
   MasterBanks:
   - {fileID: -8225973362161387882}
   - {fileID: -8352635530638917725}
   StringsBanks:
   - {fileID: -3726807046908327467}
-  stringsBankWriteTime: 636985637070091847
+  stringsBankWriteTime: 636985654782697236
   cacheVersion: 3
 --- !u!114 &430801719914574346
 MonoBehaviour:
@@ -1161,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Assets\Fmod\Build\Desktop\GFX_Gen.bank
-  lastModified: 636985637069641868
+  lastModified: 636985654782267250
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1206,6 +1205,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1253022425102536556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &1527961236404085468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,6 +1318,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 428352
   Exists: 1
+--- !u!114 &2285704679250532463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/MUSIC_03
+  guid: 8037f67b33ff574bbe0e413f4ae17054
+  Banks:
+  - {fileID: 5510187470195613398}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66000
 --- !u!114 &2585779598086099494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,8 +1417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MUS/MUSIC_Boss
   guid: 1b88f399546a1848b779efcda6ebf324
-  Banks:
-  - {fileID: 5510187470195613398}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1527,6 +1564,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 380
+--- !u!114 &4814267017929191710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &4853413641992080240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,11 +1713,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: D:\Documents\Romain\Unity\git\ankama-game-jam-2\Assets\Fmod\Build\Desktop\MUS_Gen.bank
-  lastModified: 636985637070021744
+  lastModified: 636985654782627259
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 6794688
+    Value: 6794368
   Exists: 1
 --- !u!114 &5560526904617080926
 MonoBehaviour:
@@ -1705,6 +1758,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2123
+--- !u!114 &6474013172104969216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &6511068812847858990
 MonoBehaviour:
   m_ObjectHideFlags: 0

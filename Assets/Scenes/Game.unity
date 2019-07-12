@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
         type: 3}
       propertyPath: currentWave
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
         type: 3}
@@ -655,6 +655,11 @@ PrefabInstance:
       propertyPath: DPSBoostedSprite
       value: 
       objectReference: {fileID: 1810389740}
+    - target: {fileID: 540765432996359411, guid: 3a9dd6e570cb6374990a83017b6aa2e8,
+        type: 3}
+      propertyPath: healthPoints
+      value: 1000000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9dd6e570cb6374990a83017b6aa2e8, type: 3}
 --- !u!1 &236639939 stripped
