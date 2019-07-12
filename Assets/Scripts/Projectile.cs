@@ -19,7 +19,6 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("ici");
         if (collision.gameObject.tag == "Enemy")
         {
             //Debug.Log("ENEMY DAMAGE: " + damage + " damages");

@@ -154,10 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfd1def960f85b4b9ca62c931a7e113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  boostPoints: 0
-  boostTime: 0
-=======
   boostPoints: 5
   boostTime: 30
 --- !u!114 &3399132412499673020
@@ -183,4 +179,3 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
->>>>>>> 3474fecadcb68f303f6ec8705973e664a4a0e108
