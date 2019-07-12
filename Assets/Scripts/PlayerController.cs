@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public GameObject weaponSprite;
     public TMP_Text textHP;
-    public TMP_Text textAmmo;
-    public TMP_Text textDamages;
-    public TMP_Text textPoints;
+    //public TMP_Text textAmmo;
+    //public TMP_Text textDamages;
+    //public TMP_Text textPoints;
     public GameObject DPSBoostedSprite;
     public GameObject DamagesBoostedSprite;
 
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private bool dspBoosted = false;
     private bool damagesBoosted = false;
-    private int points = 0;
+    //private int points = 0;
 
     float targetMoveSpeed;
     private Vector2 mouse;
@@ -35,9 +35,9 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         healthPointsForReset = healthPoints;
         printHP();
-        printAmmo();
-        printDamages();
-        printPoints();
+        //printAmmo();
+        //printDamages();
+        //printPoints();
     }
 
     private void Update()
@@ -120,11 +120,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakePoints(int takePoints)
-    {
-        points += takePoints;
-        printPoints();
-    }
+    //public void TakePoints(int takePoints)
+    //{
+    //    points += takePoints;
+    //    printPoints();
+    //}
 
     void GameOver()
    {
@@ -133,45 +133,45 @@ public class PlayerController : MonoBehaviour
 
    private void printHP()
    {
-        textHP.text = "HP: " + healthPoints.ToString();
+        textHP.text = healthPoints.ToString() + "%";
    }
 
-   private void printAmmo()
-   {
-        float tmpStartTimeBtwShots = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots;
-        float tmpAmmo = 1 / tmpStartTimeBtwShots;
-        textAmmo.text = "Ammo: " + tmpAmmo + "/s";
-   }
+   //private void printAmmo()
+   //{
+   //     float tmpStartTimeBtwShots = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots;
+   //     float tmpAmmo = 1 / tmpStartTimeBtwShots;
+   //     textAmmo.text = "Ammo: " + tmpAmmo + "/s";
+   //}
 
-   private void printDamages()
-   {
-        textDamages.text = "Damages: " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage + "/hit";
-   }
+   //private void printDamages()
+   //{
+   //     textDamages.text = "Damages: " + GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage + "/hit";
+   //}
 
-   private void printPoints()
-   {
-        textPoints.text = "Points: " + points.ToString();
-   }
+   //private void printPoints()
+   //{
+   //     textPoints.text = "Points: " + points.ToString();
+   //}
 
     IEnumerator BoostDamages(float boostPoints, float boostTime)
    {
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage + boostPoints;
-        printDamages();
+        //printDamages();
         if (dspBoosted)
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(135, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(197.5f, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         else
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DamagesBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().damage - boostPoints;
-        printDamages();
+        //printDamages();
         if (dspBoosted)
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DamagesBoostedSprite.SetActive(false);
     }
@@ -180,24 +180,23 @@ public class PlayerController : MonoBehaviour
     {
         float tmpStartTimeBtwShots = GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots;
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots / boostMultiplicator;
-        printAmmo();
+        //printAmmo();
         if (damagesBoosted)
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(135, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(197.5f, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         else
         {
-            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
+            DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(true);
         yield return new WaitForSeconds(boostTime);
         GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots = tmpStartTimeBtwShots;
-        printAmmo();
+        //printAmmo();
         if (damagesBoosted)
         {
-            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(110, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
+            DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(129, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
         DPSBoostedSprite.SetActive(false);
-        GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<Weapon>().startTimeBtwShots *= boostMultiplicator; 
     }
 }
