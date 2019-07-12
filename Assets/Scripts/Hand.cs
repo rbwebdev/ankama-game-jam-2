@@ -13,10 +13,14 @@ public class Hand : Mob
     public float gravityScale;
 
     private Rigidbody2D rb;
+    private float maxHealthPoints;
+    private GameObject BossBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        maxHealthPoints = healthPoints;
+        BossBar = GameObject.Find("Bar");
         animator = transform.Find("Sprite").GetComponent<Animator>();
         StartCoroutine(Crush(Random.Range(cooldownMin, cooldownMax)));
         gameObject.GetComponent<WayPoints>().speed = speed;
@@ -28,7 +32,17 @@ public class Hand : Mob
     // Update is called once per frame
     void Update()
     {
+        if (BossBar)
+        {
+            float ratio = healthPoints / maxHealthPoints;
+            if (ratio < 0f)
+            {
+                ratio = 0f;
+            }
+            BossBar.transform.localScale = new Vector3(ratio, 1f, 1f);
+        }
 
+        
     }
 
     private IEnumerator Crush(float delayTime)
