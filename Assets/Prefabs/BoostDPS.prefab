@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f47aa7e9bbe3e4458e636c24e1d9f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostAudio: event:/UI/Life/Boost
 --- !u!61 &5959051906271258173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,5 +154,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c3943e12869854288876260d301e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostMultiplicator: 4
-  boostTime: 20
+  boostMultiplicator: 2
+  boostTime: 10

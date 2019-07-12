@@ -11,7 +11,7 @@ public class Spider : Mob
     private int carrot = 200;
     void Start()
     {
-        Invoke("DestroySpider", 8);
+        Invoke("DestroySpider", 5);
         if (0 < transform.position.x)
         {
             goLeft = true;

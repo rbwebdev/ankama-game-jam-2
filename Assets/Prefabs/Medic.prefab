@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f47aa7e9bbe3e4458e636c24e1d9f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostAudio: event:/UI/Life/Boost
 --- !u!50 &-1067446469480078738
 Rigidbody2D:
   serializedVersion: 4
@@ -155,4 +154,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0530d468683e10847abba21ccbf64fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healValue: 25
+  healValue: 10

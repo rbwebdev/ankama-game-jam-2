@@ -148,7 +148,6 @@ public class PlayerController : Grounded
         }*/
        if (healthPoints <= 0)
         {
-            Debug.Log("GameOver");
             healthPoints = 0;
             printHP();
             GameOver();

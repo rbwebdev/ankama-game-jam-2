@@ -20,13 +20,12 @@ public class SpawnerWave
         SpawnType typeCurrent = new SpawnType();
         foreach (SpawnType type in types)
         {
+            cumulProba += type.parcent;
             typeCurrent = type;
-            if (rand <= type.parcent)
+            if (rand <= cumulProba)
             {
                 return typeCurrent;
             }
-
-            cumulProba += type.parcent;
         }
 
         return typeCurrent;

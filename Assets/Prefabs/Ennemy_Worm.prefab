@@ -150,7 +150,7 @@ MonoBehaviour:
   damage: 20
   destroyDelay: 0.3
   boost: {fileID: 4000928804631731784, guid: eb4177f4eb8d0024ea975c3e5734d61d, type: 3}
-  boostLootPercent: 5
+  boostLootPercent: 20
   dead: 0
   speed: 1
 --- !u!114 &3770563843516852723
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/UI/Life/Less_life
+  Event: event:/UI/Life/Life_Less
   PlayEvent: 5
   StopEvent: 6
   CollisionTag: Player

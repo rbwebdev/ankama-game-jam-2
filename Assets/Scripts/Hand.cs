@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hand : Mob
 {
@@ -41,8 +42,10 @@ public class Hand : Mob
             }
             BossBar.transform.localScale = new Vector3(ratio, 1f, 1f);
         }
-
-        
+        if (dead)
+        {
+            SceneManager.LoadScene("CreditsScreen");
+        }
     }
 
     private IEnumerator Crush(float delayTime)
