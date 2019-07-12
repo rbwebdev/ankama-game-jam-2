@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class SpawnList
+public class Grounded : MonoBehaviour
 {
-    public List<Spawn> list;
+    public bool isGrounded;
 }

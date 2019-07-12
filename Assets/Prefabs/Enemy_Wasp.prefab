@@ -173,11 +173,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d49feb74c58c59498a721f1c136d303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   healthPoints: 5
   damage: 20
   destroyDelay: 1
   boost: {fileID: 4720042558365477258, guid: d755ffe29b52eb34383fff0938fed101, type: 3}
-  boostLootPercent: 100
+  boostLootPercent: 10
   dead: 0
   cooldownMin: 1
   cooldownMax: 2

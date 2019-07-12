@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mob : MonoBehaviour
+public class Mob : Grounded
 {
     public float healthPoints;
     public float damage;
@@ -13,6 +13,7 @@ public class Mob : MonoBehaviour
     public float boostLootPercent;
 
     protected Animator animator;
+    private SpriteRenderer sprite;
 
     public bool dead = false;
 
@@ -30,12 +31,30 @@ public class Mob : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (sprite == null)
+        {
+            sprite = transform.Find("Sprite").GetComponent<SpriteRenderer>();
+        }
         healthPoints -= damage;
         if (healthPoints <= 0)
         {
             Debug.Log("dead");
             Dead();
+        } else
+        {
+            StartCoroutine(outch(sprite));
         }
+    }
+
+    private IEnumerator outch(SpriteRenderer sprite)
+    {
+        sprite.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        sprite.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        sprite.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        sprite.enabled = true;
     }
 
     protected void Dead()

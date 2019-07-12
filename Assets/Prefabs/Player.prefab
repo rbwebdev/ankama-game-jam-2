@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bee8da5f96d77408b9fc699dfb4290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 540765432996359409}
+  objectGrounded: {fileID: 540765432996359409}
 --- !u!1 &540765431968544549
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,11 +349,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510fe993d352441478de070419b299fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   rb: {fileID: 540765432996359410}
   moveSpeed: 250
   jumpPower: 16
-  isGrounded: 0
   weaponSprite: {fileID: 3947613444673771865}
+  textHP: {fileID: 0}
+  textAmmo: {fileID: 0}
+  textDamages: {fileID: 0}
+  textPoints: {fileID: 0}
+  DPSBoostedSprite: {fileID: 0}
+  DamagesBoostedSprite: {fileID: 0}
   healthPoints: 100
 --- !u!50 &540765432996359410
 Rigidbody2D:
