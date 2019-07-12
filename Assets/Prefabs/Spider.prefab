@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 1877575333683876217}
   m_Layer: 8
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!95 &1877575333683876217
 Animator:
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 1877575333744175638}
   - component: {fileID: 5605884368847361725}
   - component: {fileID: 8497209678912195454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -197,9 +197,9 @@ MonoBehaviour:
   damage: 30
   destroyDelay: 0
   boost: {fileID: 4720042558365477258, guid: d755ffe29b52eb34383fff0938fed101, type: 3}
-  boostLootPercent: 55
+  boostLootPercent: 100
   dead: 0
-  speed: 4
+  speed: 7
 --- !u!50 &8497209678912195454
 Rigidbody2D:
   serializedVersion: 4

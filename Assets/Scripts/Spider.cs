@@ -7,15 +7,29 @@ public class Spider : Mob
     public float speed;
     private bool follow = true;
 
+    private bool goLeft = false;
+    private int carrot = 200;
     void Start()
     {
-        //go autodestroy
-        //get direction
+        Invoke("DestroySpider", 8);
+        if (0 < transform.position.x)
+        {
+            goLeft = true;
+            transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
+        }
+        else
+        {
+            transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        }
     }
 
     void Update()
     {
-        Vector2 target = new Vector2(0, 0);
+        if (goLeft)
+        {
+            carrot = -200;
+        }
+        Vector2 target = new Vector2(transform.position.x + carrot, transform.position.y);
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
@@ -25,5 +39,11 @@ public class Spider : Mob
         {
             collision.gameObject.GetComponentInParent<PlayerController>().TakeDamage(damage);
         }
+    }
+
+    void DestroySpider()
+    {
+        Dead();
+        Destroy(gameObject);
     }
 }
