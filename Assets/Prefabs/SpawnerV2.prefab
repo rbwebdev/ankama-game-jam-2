@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2618871937764268568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4342331568653783380}
+  m_Layer: 0
+  m_Name: SpiderSpawnHoleLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4342331568653783380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618871937764268568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.6, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3559669669631273534}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3559669668855232319
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +93,8 @@ Transform:
   - {fileID: 3559669669908574030}
   - {fileID: 3559669670103481120}
   - {fileID: 3559669669645971297}
+  - {fileID: 4342331568653783380}
+  - {fileID: 5809370730097767632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,7 +115,7 @@ MonoBehaviour:
     SpawnTime: 60
     types:
     - mob: {fileID: 572208726619747923, guid: 64d7dac0d12e78944af1d75f9d28a8eb, type: 3}
-      parcent: 80
+      parcent: 70
       positions:
       - {fileID: 3559669668855232312}
       - {fileID: 3559669669756952015}
@@ -96,6 +128,13 @@ MonoBehaviour:
       - {fileID: 3559669669908574030}
       - {fileID: 3559669670103481120}
       - {fileID: 3559669669645971297}
+    - mob: {fileID: 1877575333744175641, guid: 42d0d58b756720f4ca971ff31e4c4c64, type: 3}
+      parcent: 10
+      positions:
+      - {fileID: 4342331568653783380}
+      - {fileID: 5809370730097767632}
+    eventName: 
+    WaveDelay: 0
   - mobNumer: 15
     SpawnTime: 60
     types:
@@ -113,7 +152,9 @@ MonoBehaviour:
       - {fileID: 3559669669908574030}
       - {fileID: 3559669670103481120}
       - {fileID: 3559669669645971297}
-  currentWave: 1
+    eventName: 
+    WaveDelay: 0
+  currentWave: 0
 --- !u!1 &3559669669645971296
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,4 +274,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3559669669631273534}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8286465579339237783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5809370730097767632}
+  m_Layer: 0
+  m_Name: SpiderSpawnHoleRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5809370730097767632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286465579339237783}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.35, y: -2.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3559669669631273534}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
