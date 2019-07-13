@@ -197,8 +197,9 @@ MonoBehaviour:
   healthPoints: 1000
   damage: 30
   destroyDelay: 0
-  boost: {fileID: 4720042558365477258, guid: d755ffe29b52eb34383fff0938fed101, type: 3}
-  boostLootPercent: 0
+  boost: {fileID: 2859396509613839779, guid: 4df90def2f111764da17fb3bc525a481, type: 3}
+  boostLootPercent: 10
+  dropWhen: 1
   dead: 0
   speed: 7
 --- !u!50 &8497209678912195454

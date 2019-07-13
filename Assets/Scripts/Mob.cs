@@ -11,6 +11,8 @@ public class Mob : Grounded
     public GameObject boost;
     [Range(0f, 100f)]
     public float boostLootPercent;
+    public enum DropWhen {onDeath, onTakeDamage}
+    public DropWhen dropWhen;
 
     protected Animator animator;
     private SpriteRenderer sprite;
@@ -31,6 +33,10 @@ public class Mob : Grounded
 
     public void TakeDamage(float damage)
     {
+        if (dropWhen == DropWhen.onTakeDamage)
+        {
+            DropBoost();
+        }
         if (sprite == null)
         {
             sprite = transform.Find("Sprite").GetComponent<SpriteRenderer>();
@@ -38,7 +44,6 @@ public class Mob : Grounded
         healthPoints -= damage;
         if (healthPoints <= 0)
         {
-            //Debug.Log("dead");
             Dead();
         } else
         {
@@ -67,6 +72,16 @@ public class Mob : Grounded
         Spawner spawner = GameObject.FindGameObjectsWithTag("Spawner")[0].GetComponent<Spawner>();
         spawner.modDead();
 
+        if (dropWhen == DropWhen.onDeath)
+        {
+            DropBoost();
+        }
+
+        Destroy(gameObject, destroyDelay);
+    }
+
+    protected void DropBoost()
+    {
         if (boost)
         {
             if (Random.Range(0f, 100f) <= boostLootPercent)
@@ -76,7 +91,5 @@ public class Mob : Grounded
                 rb.AddForce(new Vector2(Random.Range(-100f, 100f), 200f));
             }
         }
-
-        Destroy(gameObject, destroyDelay);
     }
 }

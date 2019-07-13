@@ -31,7 +31,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Hand/VOI_Human_Eat
   guid: fb4b93885cd71b4793f18cb9a76235c6
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -73,7 +73,7 @@ MonoBehaviour:
   Path: event:/VOI/Apple/VOI_Apple_Death
   guid: 7de74de9bbf97640bfd2f805bd6e8682
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -96,13 +96,13 @@ MonoBehaviour:
   Path: event:/UI/MUSIC_Pause
   guid: d089f7612ca3eb4ab80d9d5886a3920c
   Banks:
-  - {fileID: -2646201369601821928}
-  - {fileID: 5510187470195613398}
+  - {fileID: 4575018513511239926}
+  - {fileID: 8486197581057072867}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4814267017929191710}
+  - {fileID: -2166351554250396785}
   MinDistance: 0
   MaxDistance: 0
   Length: 110800
@@ -125,7 +125,39 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 17670
-  Exists: 1
+  Exists: 0
+--- !u!114 &-8346685996960142599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
+--- !u!114 &-8301377620907515398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-8225973362161387882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +192,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Wasp/VOI_Wasp_Hit
   guid: 1faa43932527354fabfdf92a7b01d2ab
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -183,7 +215,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Hand
   guid: f21bf41c29fdae45ac8af8ca2263ba06
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -206,7 +238,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Death/FOL_GEN_Death_Worm
   guid: 7ab033888ad98443a0752d03b78f409a
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -214,6 +246,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2123
+--- !u!114 &-8015869225750407638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\Voix_Gen.bank
+  lastModified: 636986580812206711
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 428352
+  Exists: 1
 --- !u!114 &-7749364186639311802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +280,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Human
   guid: 16ae6cc46066cb4b856effa35ae4c2c2
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -252,7 +303,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Death/FOL_GEN_Death_Wasp
   guid: 9b2c22fbe0a36f418b4a058e06bd030a
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -291,8 +342,8 @@ MonoBehaviour:
   Path: event:/UI/Game-Over/GFX_Game_Over
   guid: 9301b8575b47c540ae58dd0aaa649dd3
   Banks:
-  - {fileID: -2646201369601821928}
-  - {fileID: 430801719914574346}
+  - {fileID: 6787004860392008365}
+  - {fileID: 4575018513511239926}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -331,7 +382,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Death/FOL_GEN_Death_Hand
   guid: 8b2780297f65d041b0e8b79de9d7295f
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -354,7 +405,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Death/FOL_GEN_Death_Spider
   guid: 344dc1ad856b494492ba7dbadc817225
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -377,7 +428,7 @@ MonoBehaviour:
   Path: event:/VOI/Apple/VOI_Apple_Spawn
   guid: 061766bbe77ccf418cb890fb0dceb255
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -401,6 +452,26 @@ MonoBehaviour:
   Min: 0
   Max: 1.1
   Default: 0
+--- !u!114 &-5550204203942620847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636986580812047143
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 17670
+  Exists: 1
 --- !u!114 &-5535043061636097660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,7 +503,7 @@ MonoBehaviour:
   Path: event:/UI/Life/Life_Low
   guid: 6ad8048bd477ac4aba9db2f8575e4348
   Banks:
-  - {fileID: -2646201369601821928}
+  - {fileID: 4575018513511239926}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -471,7 +542,7 @@ MonoBehaviour:
   Path: event:/GFX/Spell/GFX_Boost_Spider
   guid: 6f98f0686701bc41bd374947f33512c4
   Banks:
-  - {fileID: 430801719914574346}
+  - {fileID: 6787004860392008365}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -494,7 +565,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Hand/VOI_Hand_Death
   guid: 108d61784fd9a8418018976c07d58667
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -517,7 +588,7 @@ MonoBehaviour:
   Path: snapshot:/Start
   guid: 40e58064bb9775478722012d5dc11c51
   Banks:
-  - {fileID: -8352635530638917725}
+  - {fileID: -5550204203942620847}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -556,7 +627,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Spider/VOI_Spider_Hit
   guid: 4b703af1185cd64aa13beeb94780ce32
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -579,7 +650,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Worm
   guid: e25f6f909dfad145a28b361d0e3bd1e9
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -602,12 +673,12 @@ MonoBehaviour:
   Path: event:/MUS/MUSIC_01
   guid: d67c8eb9fc801c4087cea027e9aae701
   Banks:
-  - {fileID: 5510187470195613398}
+  - {fileID: 8486197581057072867}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6474013172104969216}
+  - {fileID: -497426537106009479}
   MinDistance: 0
   MaxDistance: 0
   Length: 185600
@@ -626,7 +697,7 @@ MonoBehaviour:
   Path: event:/GFX/Open_Box
   guid: f06823d4065cb64281c24f4b87268a01
   Banks:
-  - {fileID: 430801719914574346}
+  - {fileID: 6787004860392008365}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -665,12 +736,12 @@ MonoBehaviour:
   Path: event:/MUS/MUSIC_02
   guid: cb8fc25190c82b4faf4833db2f716815
   Banks:
-  - {fileID: 5510187470195613398}
+  - {fileID: 8486197581057072867}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1253022425102536556}
+  - {fileID: -8301377620907515398}
   MinDistance: 0
   MaxDistance: 0
   Length: 112013
@@ -687,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636985654782697236
+  lastModified: 636986580812087033
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -708,7 +779,7 @@ MonoBehaviour:
   Path: event:/GFX/Spell/GFX_Boost_Worm
   guid: 8fa9d2c7f6d4524c9ddac5a4f5d90a18
   Banks:
-  - {fileID: 430801719914574346}
+  - {fileID: 6787004860392008365}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -731,7 +802,7 @@ MonoBehaviour:
   Path: event:/AMB/AMB_Statique/AMB_Cupboard
   guid: 7b67c0cb6bc8c74daacaad3bd7673696
   Banks:
-  - {fileID: 6895089624102116984}
+  - {fileID: 1328486219045412698}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -770,7 +841,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Spider
   guid: e980acbbc7ada44abaa03a4dda7f9665
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -831,7 +902,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/FOL_Open_Cupboard
   guid: 7be9eb816f02d24593937d45eb1f8f57
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -839,6 +910,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2600
+--- !u!114 &-2166351554250396785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
 --- !u!114 &-1767003924003719500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +941,7 @@ MonoBehaviour:
   Path: snapshot:/Boss
   guid: 5e3033e985e30c4c9e99d33d9dba4469
   Banks:
-  - {fileID: -8352635530638917725}
+  - {fileID: -5550204203942620847}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -909,7 +996,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Spider/VOI_Spider_Attack
   guid: b9afb4c8d833514e9d1d2689eabaf787
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -980,7 +1067,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Wasp/VOI_Wasp_Attack
   guid: d9f024b74a838c4688275c737507457f
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -989,6 +1076,22 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &-569778566837874299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MUSIC_END
+  Min: 0
+  Max: 1.1
+  Default: 0
+--- !u!114 &-497426537106009479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1038,7 +1141,7 @@ MonoBehaviour:
   Path: event:/GFX/Spell/GFX_Boost_Wasp
   guid: ef3b57214e05d748be2d9e2e12f69baa
   Banks:
-  - {fileID: 430801719914574346}
+  - {fileID: 6787004860392008365}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1061,7 +1164,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Spider
   guid: 4ba617fb3753a74ab29ab893e04d7338
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1083,13 +1186,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3726807046908327467}
-  - {fileID: 430801719914574346}
-  - {fileID: -2646201369601821928}
-  - {fileID: -8352635530638917725}
-  - {fileID: -8748572642593954360}
-  - {fileID: 5510187470195613398}
-  - {fileID: 2082724251665107593}
-  - {fileID: 6895089624102116984}
+  - {fileID: 6787004860392008365}
+  - {fileID: 4575018513511239926}
+  - {fileID: -5550204203942620847}
+  - {fileID: 4154799057609840563}
+  - {fileID: 8486197581057072867}
+  - {fileID: -8015869225750407638}
+  - {fileID: 1328486219045412698}
   EditorEvents:
   - {fileID: -4563837356983495429}
   - {fileID: -3501971624444685030}
@@ -1143,9 +1246,10 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: -8225973362161387882}
   - {fileID: -8352635530638917725}
+  - {fileID: -5550204203942620847}
   StringsBanks:
   - {fileID: -3726807046908327467}
-  stringsBankWriteTime: 636985654782697236
+  stringsBankWriteTime: 636986580812087033
   cacheVersion: 3
 --- !u!114 &430801719914574346
 MonoBehaviour:
@@ -1197,7 +1301,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Worm/VOI_Worm_Hit
   guid: 69180bde8c5a324d9d359ebd0f830561
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1221,6 +1325,25 @@ MonoBehaviour:
   Min: 0
   Max: 1.1
   Default: 0
+--- !u!114 &1328486219045412698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\AMB_Gen.bank
+  lastModified: 636985325453848814
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1106
+  Exists: 1
 --- !u!114 &1527961236404085468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1359,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Fly_Wasp
   guid: 7d3edc36ff069b44a54ea0c314ec6fb4
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1275,7 +1398,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Jump_Apple
   guid: 0b203d684f5db047ae343e5fb20d48d3
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1333,10 +1456,10 @@ MonoBehaviour:
   Path: event:/MUS/MUSIC_03
   guid: 8037f67b33ff574bbe0e413f4ae17054
   Banks:
-  - {fileID: 5510187470195613398}
+  - {fileID: 8486197581057072867}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -1372,7 +1495,7 @@ MonoBehaviour:
   Path: event:/UI/Life/Boost
   guid: 17a9a925bf788f4c9b8be00eea237800
   Banks:
-  - {fileID: -2646201369601821928}
+  - {fileID: 4575018513511239926}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1395,7 +1518,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Worm/VOI_Worm_Death
   guid: 7ec8d3934c3b974889b89018511f1b52
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1459,7 +1582,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Hand/VOI_Hand_Hit
   guid: 5edb774b055ddd4cac9f1183b464ddb8
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1467,6 +1590,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 250
+--- !u!114 &4154799057609840563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\FOL_Gen.bank
+  lastModified: 636985563441476864
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 483104
+  Exists: 1
 --- !u!114 &4274398741894395070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,7 +1624,7 @@ MonoBehaviour:
   Path: event:/VOI/Apple/VOI_Apple_Boost
   guid: 5c0aca27703a894e897791398d7a79c4
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1506,6 +1648,25 @@ MonoBehaviour:
   Min: 1
   Max: 3
   Default: 1
+--- !u!114 &4575018513511239926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\UI_Gen.bank
+  lastModified: 636986580812156845
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1283040
+  Exists: 1
 --- !u!114 &4638985676445299577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1556,7 +1717,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Wasp/VOI_Wasp_Death
   guid: a3f1929cf3fbf14995eeb3eb33b075a2
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1646,7 +1807,7 @@ MonoBehaviour:
   Path: event:/VOI/Apple/VOI_Apple_Attack
   guid: 434f10cde4304145828da1aff22c6cac
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1669,7 +1830,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Wasp
   guid: ce04b79025e0ff45a740a3335e73f260
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1692,7 +1853,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Spider/VOI_Spider_Death
   guid: fbe41eefca44de409819b4b7ccb07859
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1750,7 +1911,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Weapon/FOL_GEN_Attack_Worm
   guid: bb1b4e05e85795439408017c5982383a
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1789,7 +1950,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Move/FOL_GEN_Footsteps_Apple
   guid: 20911fe58be24c4fa9cc05731e68f6ad
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1797,6 +1958,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 260
+--- !u!114 &6787004860392008365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\GFX_Gen.bank
+  lastModified: 636986580811668152
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 104768
+  Exists: 1
 --- !u!114 &6841441462759627513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1812,7 +1992,7 @@ MonoBehaviour:
   Path: event:/VOI/Enemy/Worm/VOI_Worm_Attack
   guid: b0ad7e468839c249961b0308bae32540
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1854,7 +2034,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Weapon/FOL_Gun_Shoot
   guid: 8ed6360473d17e4b8ea3c51820d87b3a
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1893,7 +2073,7 @@ MonoBehaviour:
   Path: event:/UI/Life/Life_Less
   guid: 90807930436db1418afd9f23dca7bc3d
   Banks:
-  - {fileID: -2646201369601821928}
+  - {fileID: 4575018513511239926}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1916,7 +2096,7 @@ MonoBehaviour:
   Path: event:/VOI/Apple/VOI_Apple_Hit
   guid: 99cc5a78a7cdbd4da11f2da0bfa93dd2
   Banks:
-  - {fileID: 2082724251665107593}
+  - {fileID: -8015869225750407638}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1924,6 +2104,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1886
+--- !u!114 &8486197581057072867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jonathan\Documents\GitHub\ankama-game-jam-2-new\Assets\Fmod\Build\Desktop\MUS_Gen.bank
+  lastModified: 636986580812017218
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 6794496
+  Exists: 1
 --- !u!114 &8621781060342716754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1958,7 +2157,7 @@ MonoBehaviour:
   Path: event:/FOL/Gen/Impact/FOL_GEN_Impact
   guid: 2438137392bcbc448b931c053341bcab
   Banks:
-  - {fileID: -8748572642593954360}
+  - {fileID: 4154799057609840563}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

@@ -530,8 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1517553d80b98e4fb1c6440a573902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandPosition: {fileID: 723841775}
   hand: {fileID: 3745333657848586166, guid: 6702204dd7ab82b41b90d37bb96d51b1, type: 3}
+  HandPosition: {fileID: 723841775}
+  BossHealthBar: {fileID: 0}
+  BossHealthBarPosition: {fileID: 0}
 --- !u!1001 &1164187358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,7 +771,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[2].types.Array.data[0].mob
       value: 
-      objectReference: {fileID: 572208726619747923, guid: 64d7dac0d12e78944af1d75f9d28a8eb,
+      objectReference: {fileID: 1877575333744175641, guid: 42d0d58b756720f4ca971ff31e4c4c64,
         type: 3}
     - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
         type: 3}
@@ -830,7 +832,7 @@ PrefabInstance:
     - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
         type: 3}
       propertyPath: currentWave
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
         type: 3}
@@ -841,6 +843,22 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[2].WaveDelay
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
+        type: 3}
+      propertyPath: waves.Array.data[1].types.Array.data[1].mob
+      value: 
+      objectReference: {fileID: 1877575333744175641, guid: 42d0d58b756720f4ca971ff31e4c4c64,
+        type: 3}
+    - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
+        type: 3}
+      propertyPath: waves.Array.data[1].types.Array.data[0].parcent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559669669631273533, guid: 51de7eded81576345b54226428966d5c,
+        type: 3}
+      propertyPath: waves.Array.data[1].types.Array.data[1].parcent
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51de7eded81576345b54226428966d5c, type: 3}
@@ -953,6 +971,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 853765666053715341, guid: 8ad20121e02f38245b39e81c880e71a5,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnHand
+      objectReference: {fileID: 0}
     - target: {fileID: 853765666053715340, guid: 8ad20121e02f38245b39e81c880e71a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1007,11 +1030,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 853765666053715341, guid: 8ad20121e02f38245b39e81c880e71a5,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnHand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ad20121e02f38245b39e81c880e71a5, type: 3}
