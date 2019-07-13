@@ -186,6 +186,7 @@ public class PlayerController : Grounded
         {
             DPSBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DPSBoostedSprite.GetComponent<RectTransform>().position.y);
         }
+        damagesBoosted = false;
         DamagesBoostedSprite.SetActive(false);
     }
 
@@ -208,6 +209,7 @@ public class PlayerController : Grounded
         {
             DamagesBoostedSprite.GetComponent<RectTransform>().position = new Vector2(34, DamagesBoostedSprite.GetComponent<RectTransform>().position.y);
         }
+        dspBoosted = false;
         DPSBoostedSprite.SetActive(false);
     }
 
