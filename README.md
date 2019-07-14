@@ -1,5 +1,6 @@
 # Ankama Game Jam N°2 - Team 43
 **Theme:** "Eat apples"
+
 **Time:** 48h
 
 ## iSurvive
@@ -15,6 +16,7 @@ Wasps, Worms, Spiders, and the Final Boss
 - D : →
 
 **Pause:** Escape
+
 **Jump:** Space
 
 ## Software
@@ -23,6 +25,9 @@ Wasps, Worms, Spiders, and the Final Boss
 
 ## Credits
 **Sound design:** Mélanie
+
 **Game design:** Emilien
+
 **Graphics:** Abel
+
 **Developpers:** Inooni, [Jonathan](http://www.jonathanjorand.fr), [Romain](http://www.romainbrasier.fr)
