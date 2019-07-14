@@ -5,7 +5,10 @@
 
 ## iSurvive
 Everyone loves to eat apples, try to survive without ending up in the stomachs of your enemies.
+
 [Trailer on Youtube](https://www.youtube.com/watch?v=7Iu9L3IoQD4)
+
+[Play Game](http://rbwebdev.ovh/iSurviveWebGL/)
 
 ## Enemies
 Wasps, Worms, Spiders, and the Final Boss
