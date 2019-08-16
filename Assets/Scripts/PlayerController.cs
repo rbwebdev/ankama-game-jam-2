@@ -55,7 +55,7 @@ public class PlayerController : Grounded
 
     private void Start()
     {
-        isGrounded = true;
+        isGrounded = false;
         healthPointsForReset = healthPoints;
         printHP();
     }
