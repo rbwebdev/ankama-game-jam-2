@@ -37,3 +37,5 @@ fmod_editor.log
 *.log
 
 Assets/StreamingAssets/
+
+.idea/

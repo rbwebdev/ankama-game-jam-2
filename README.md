@@ -8,7 +8,7 @@ Everyone loves to eat apples, try to survive without ending up in the stomachs o
 
 [Trailer on Youtube](https://www.youtube.com/watch?v=7Iu9L3IoQD4)
 
-[Play Game](http://rbwebdev.ovh/iSurviveWebGL/)
+[Play Game](https://rbwebdev.github.io/ankama-game-jam-2/)
 
 ## Enemies
 Wasps, Worms, Spiders, and the Final Boss
